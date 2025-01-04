@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegistrationController;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,32 +17,21 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-
 Route::get('/', [PagesController::class, 'index']);
-Route::get('/login/employer', [AuthController::class, 'loginEmployer'])->name('loginEmployer');
-Route::post('/login', [AuthController::class, 'auth']);
 
-Route::get('/login/applicant', [AuthController::class, 'loginApplicant'])->name('loginApplicant');
+Route::get('login', [AuthController::class, 'loginPage'])->name('login');
+Route::post('login', [AuthController::class, 'login']);
+Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('registration', [RegistrationController::class, 'registration'])->name('registration');
 
-Route::get('/registration', [RegistrationController::class, 'registration'])->name('registration');
-Route::get('/vacancy', [SearchController::class, 'vacancy']);
-Route::get('/resume', [SearchController::class, 'resume']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-
-Route::get('/api/get', function() {
-    sleep(1);
-    return json_encode([
-        'name' => 'Vladislav2',
-        'lastname' => 'Gorbunov2',
-        'age' => 34
-    ]);
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/api/gets', function() {
-    sleep(5);
-    return json_encode([
-        'name' => 'Vladislav1',
-        'lastname' => 'Gorbunov1',
-        'age' => 34
-    ]);
-});
+// require __DIR__.'/auth.php';

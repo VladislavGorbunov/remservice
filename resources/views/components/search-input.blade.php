@@ -1,14 +1,15 @@
-<div class="col-12 col-md-6 mx-auto mt-4">
-    <form action="" method="GET" class="search-form">
-        <div class="input-group mb-4">
-            <input type="text" class="form-control form-control-search" placeholder="Поиск вакансий в Колпино">
-            <button class="btn btn-secondary btn-search" type="submit"><i class="bi bi-search d-none d-md-inline"></i> <span class="btn-search-text">Найти</span></button>
+<div class="col-12 col-md-7 mx-auto mt-3">
+    <div class="input-group-layer mb-4">
+        <div class="input-group">
+            <div class="form-control form-control-text text-center">
+                Здравствуйте! Что нужно отремонтировать? <div class="bi-icon-search-block"><i class="bi bi-hand-index-thumb"></i></div>
+            </div>
         </div>
-    
-        <div class="d-flex text-light justify-content-center">
-            <button class="btn-role vacancy" data-role="vacancy">Поиск вакансий</button>
-            <i class="bi bi-arrow-left-right"></i>
-            <button class="btn-role resume" data-role="resume">Поиск резюме</button>
-        </div>
-    </form>
+    </div>
+
+    <div class="d-flex justify-content-center text-dark">
+        <button class="btn-role vacancy" data-role="vacancy">Найти частного мастера</button>
+         <i class="bi bi-repeat"></i> 
+        <button class="btn-role resume " data-role="resume">Найти сервисный центр</button>
+    </div>   
 </div>

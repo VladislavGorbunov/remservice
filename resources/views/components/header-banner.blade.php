@@ -1,13 +1,18 @@
 <div class="header-banner d-flex align-items-center justify-content-center">
     <div class="container">
-        <div class="col-12 col-md-8 mx-auto">
-            <h1 class="text-center text-light fs-2">Поиск работы в Колпино для всех</h1>
-            <p class="text-light text-center">Вы в поисках работы в своём родном городе? Наш сайт создан специально для Вас!
-                Найдите работу рядом с домом, с удобным для Вас графиком и условиями труда прямо сегодня!
-            </p>
-        </div>
+        <div class="row">
+            <div class="col-12 col-md-7 p-3">
+                <h1 class="text-center fs-1 mb-2 col-12 col-md-11 mx-auto">Найдём <span style="color:#2563eb">мастера</span> по ремонту бытовой техники в Москве</h1>
+                <p class="text-center">
+                    У Вас сломалась бытовая техника в самый не подходящий момент? Вы в поисках опытного мастера по ремонту техники в Москве или области?
+                    Наш сервис создан специально для Вас! У нас Вы найдёте опытного и ответственного специалиста который выполнит ремонт быстро, качественно и по доступной цене!
+                </p>а
+                <x-search-input/>
+            </div>
 
-        <x-search-input/>
+            <div class="col-12 col-sm-5 right-img-header"></div>
+        </div>   
     </div>
     <div class="header-layer"></div>
 </div>
+
