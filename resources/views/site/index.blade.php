@@ -1,7 +1,9 @@
 <x-header/>
 
 <div class="container">
-<h2 class="text-center mt-4">Новые вакансии в Колпино</h2>
+<x-catalog-of-services/>
+<h2 class="text-center mt-4">Топ-10 мастеров Москвы</h2>
+
 
 </div>
 <x-footer/>

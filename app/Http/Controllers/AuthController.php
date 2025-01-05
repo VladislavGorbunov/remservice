@@ -2,33 +2,55 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
 
 class AuthController extends Controller
 {
     //
-    public function loginEmployer(): View
+    public function loginPage(Request $request)
     {
+        if (Auth::check()) {
+            return redirect()->intended('/');
+        }
+        
+
         $data = [
             'form_text' => 'Найдите сотрудников прямо сегодня!',
+            'error' => $request->session()->get('status') ? $request->session()->get('status') : ''
         ];
 
         return view('site.login', $data);
     }
 
-    //
-    public function loginApplicant(): View
-    {
-        $data = [
-            'form_text' => 'Найдите работу прямо сегодня!',
-        ];
 
-        return view('site.login', $data);
+    public function login(Request $request, User $user)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials, $request->get('remember'))) {
+            $request->session()->regenerate();
+            $user = Auth::user();
+            return redirect()->intended('profile');
+        } else {
+            $request->session()->flash('status', 'Неверный логин или пароль.');
+            return redirect()->intended('login');
+        }
     }
 
-    public function auth(Request $request) 
+
+    public function logout(Request $request) 
     {
-        var_dump($request->post());
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return Redirect::to('/');
     }
+
 }
