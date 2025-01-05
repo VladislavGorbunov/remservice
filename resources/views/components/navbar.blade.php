@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-lg">
   <div class="container">
-  <a class="navbar-brand" href="#"><i class="bi bi-tools"></i> ЗАМАСТЕРОМ.РУ</a>
+  <a class="navbar-brand" href="#">ЗаМастером</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -3,8 +3,7 @@ const vacancyBtn = document.querySelector('.vacancy')
 const resumeBtn = document.querySelector('.resume')
 const btnRole = document.querySelectorAll('.btn-role')
 
-const checkColor = '#2563eb'
-
+const checkColor = '#463ee4'
 
 vacancyBtn.style.color = checkColor
 

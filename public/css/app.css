@@ -17,29 +17,28 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
     color: rgba(32, 32, 52, 1) !important;
-    font-weight: 900 !important;
 }
 
 .navbar {
-    background-color: #fff; 
-    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     padding: 18px 0;
+    color: #111 !important;
 }
 
 .navbar-brand {
-    font-weight: 500;
+    font-weight: 800;
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    color: #111;
+    font-size: 21px;
 }
 
 .btn-modal-city {
     font-size: 14px;
     background: none;
-    border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 20px;
-    padding: 8px 25px;
-    color: #111;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: #000;
 }
 
 .btn-modal-city:hover {
@@ -67,32 +66,37 @@ h1, h2, h3, h4, h5, h6 {
 .header-banner {
     position: relative;
     width: 100%;
-    min-height: 550px;
-    background: #e2e8f0 url(fhttps://i.pinimg.com/originals/1a/2b/c6/1a2bc6d34916dc4ce3e557895c78cb48.jpg);
+    min-height: 480px;
+    background: #eeeefc url("fhttps://www.project-academy.co.uk/wp-content/uploads/2017/11/technology.jpg") center;
     background-size: cover;
     z-index: 1;
+    margin-top: 0px;
+    padding: 60px 40px;
+    border-radius: 20px;
 }
 
 .right-img-header {
     background: #eeeefc url("https://avatars.mds.yandex.net/i?id=74a39a279766181f047d17b4b33e3fd8_l-10815143-images-thumbs&n=13") center;
     background-size: cover;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 .header-layer {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(21, 21, 36, 0);
-    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    background: rgba(32, 32, 52, 0);
+    backdrop-filter: blur(7px);
     z-index: -1;
 }
 
+
 .btn-navbar {
-    background: #2563eb;
+    background: #463ee4;
     border: none;
     border-radius: 10px;
-    padding: 10px 30px;
+    padding: 12px 30px;
     font-size: 14px;
 }
 
@@ -108,12 +112,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-navbar-outline {
-    border: 0px solid rgba(255,255,255,0.4);
+    border: none;
     background: none;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-radius: 10px;
+    padding: 12px 20px;
     font-size: 14px;
-    color: #111;
+    color: #000;
 }
 
 .btn-navbar-outline:hover {
@@ -128,17 +132,17 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .input-group-layer {
-    background: rgba(224, 224, 255, 0.04);
-    padding: 11px;
-    backdrop-filter: blur(0px);
+    background: rgb(70, 62, 228, 0.05);
+    padding: 13px;
+    backdrop-filter: blur(10px);
     border-radius: 10px;
 }
 
 .input-group .form-control {
-    background: #2563eb;
+    background: #463ee4;
     border: none;
     border-radius: 10px;
-    padding: 15px;
+    padding: 21px;
 }
 
 .input-group .form-control-text {
@@ -170,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     border: none;
     color: #111;
-    font-size: 15px;
+    font-size: 14px;
     margin-right: 0;
 }
 
