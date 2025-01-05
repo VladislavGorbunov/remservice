@@ -17,6 +17,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
     color: rgba(32, 32, 52, 1) !important;
+    font-weight: 900 !important;
+    font-size: 46px;
 }
 
 .navbar-top {
@@ -81,10 +83,16 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
+.left-text-header {
+    
+    padding: 50px 30px 50px 0px;
+}
+
 .right-img-header {
     background: #eeeefc url("https://avatars.mds.yandex.net/i?id=74a39a279766181f047d17b4b33e3fd8_l-10815143-images-thumbs&n=13") center;
     background-size: cover;
     border-radius: 20px;
+    
 }
 
 .header-layer {
@@ -148,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #463ee4;
     border: none;
     border-radius: 10px;
-    padding: 21px;
+    padding: 20px;
 }
 
 .input-group .form-control-text {
