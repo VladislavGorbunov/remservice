@@ -1,7 +1,7 @@
-<div class="container"><div class="header-banner d-flex align-items-center justify-content-center">
+<div class="header-banner d-flex align-items-center justify-content-center">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-7 p-3">
+            <div class="col-12 col-md-7">
                 <h1 class="text-center fs-1 mb-2 col-12 col-md-11 mx-auto"><span style="color:#463ee4;">Мастера</span> по ремонту бытовой техники в Москве</h1>
                 <p class="text-center"><strong>ЗаМастером.ру - сервис поиска специалистов по ремонту</strong></p>
                 <p class="text-center">
@@ -15,5 +15,5 @@
         </div>   
     </div>
     <!-- <div class="header-layer"></div> -->
-</div></div>
+</div>
 

@@ -19,6 +19,15 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(32, 32, 52, 1) !important;
 }
 
+.navbar-top {
+    padding: 3px 0px !important;
+    border-bottom: 1px solid #f0f4ff;
+}
+
+.navbar-top .nav-link {
+    font-size: 13px;
+}
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
@@ -66,13 +75,10 @@ h1, h2, h3, h4, h5, h6 {
 .header-banner {
     position: relative;
     width: 100%;
-    min-height: 480px;
-    background: #eeeefc url("fhttps://www.project-academy.co.uk/wp-content/uploads/2017/11/technology.jpg") center;
+    min-height: 550px;
+    background: #f3f3ff url("fhttps://www.project-academy.co.uk/wp-content/uploads/2017/11/technology.jpg") center;
     background-size: cover;
     z-index: 1;
-    margin-top: 0px;
-    padding: 60px 40px;
-    border-radius: 20px;
 }
 
 .right-img-header {
