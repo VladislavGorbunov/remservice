@@ -1,6 +1,6 @@
-<nav class="navbar navbar-dark navbar-expand-lg">
+<nav class="navbar navbar-light navbar-expand-lg fixed-top">
   <div class="container">
-  <a class="navbar-brand" href="#"><i class="bi bi-tools"></i> ЗАМАСТЕРОМ.РУ</a>
+  <a class="navbar-brand" href="#">ЗаМастером</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,16 +9,16 @@
     <x-modal-city/>
       <ul class="navbar-nav me-auto text-center py-5 py-md-0">
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
-          <a class="nav-link text-light" href="#">Главная</a>
+          <a class="nav-link" href="#">Главная</a>
         </li>
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
-          <a class="nav-link text-light" href="#">О проекте</a>
+          <a class="nav-link" href="#">О проекте</a>
         </li>
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
-          <a class="nav-link text-light">Контакты</a>
+          <a class="nav-link">Контакты</a>
         </li>
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
-          <a class="nav-link text-light">Реклама</a>
+          <a class="nav-link">Реклама</a>
         </li>
       </ul>
       <form class="d-flex justify-content-center" role="search">
