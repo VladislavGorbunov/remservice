@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-lg">
   <div class="container">
-  <a class="navbar-brand" href="#">ЗаМастером</a>
+  <a class="navbar-brand" href="#"><span style="color:#463ee4">ЗА</span>МАСТЕРОМ</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,8 +22,8 @@
         </li>
       </ul>
       <form class="d-flex justify-content-center" role="search">
-        <a href="{{ route('login') }}" class="btn btn-success btn-navbar-outline mx-1" type="submit">Личный кабинет</a>
-        <a href="{{ route('registration') }}" class="btn btn-success btn-navbar mx-1" type="submit">Регистрация</a>
+        <a href="{{ route('login') }}" class="btn btn-success btn-navbar-outline mx-1" type="submit">Клиентам</a>
+        <a href="{{ route('registration') }}" class="btn btn-success btn-navbar mx-1" type="submit">Специалистам</a>
       </form>
     </div>
   </div>
