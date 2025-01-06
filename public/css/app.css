@@ -85,6 +85,25 @@ h1 {
     background: rgba(243, 243, 255, 1);
     background-size: cover;
     z-index: 1;
+    overflow: hidden;
+}
+
+.header-banner .container .stir-wash {
+    display: block;
+    position: absolute;
+    bottom: -400px;
+    z-index: -1;
+    left: calc(8% );
+    transform: rotate(-20deg);
+}
+
+.header-banner .container .stir-wash-top {
+    display: block;
+    position: absolute;
+    top: -440px;
+    z-index: -1;
+    right: calc(8% );
+    transform: rotate(-20deg);
 }
 
 .left-text-header {
