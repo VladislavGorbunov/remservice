@@ -13,16 +13,17 @@ body {
     
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-family: "Rubik", serif;
     font-weight: 700 !important;
     color: rgba(32, 32, 52, 1) !important;
-    
+    font-size: 28px !important; 
 }
 
 h1 {
+    font-family: "Rubik", serif;
+    font-weight: 700 !important;
     font-size: 44px;
-    
 }
 
 .navbar-top {

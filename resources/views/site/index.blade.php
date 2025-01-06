@@ -1,7 +1,7 @@
 <x-header/>
 
 <div class="container">
-<x-catalog-of-services/>
+<x-advantages/>
 <x-catalog-of-services/>
 <h2 class="text-center mt-4">Топ-10 мастеров Москвы</h2>
 
