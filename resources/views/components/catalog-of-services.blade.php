@@ -1,4 +1,4 @@
-<h2 class="text-center mt-4 mb-2">Каталог услуг</h2>
+<h2 class="text-center mt-4 mb-2">Отремонтируем любую технику на дому</h2>
 <p class="text-center">Выбирете технику которая нуждается в ремонте</p>
 <div class="row">
 

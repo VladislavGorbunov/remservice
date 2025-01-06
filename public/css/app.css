@@ -13,17 +13,16 @@ body {
     
 }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Rubik", serif;
     font-weight: 700 !important;
     color: rgba(32, 32, 52, 1) !important;
-    font-size: 28px !important; 
+    
 }
 
 h1 {
-    font-family: "Rubik", serif;
-    font-weight: 700 !important;
     font-size: 44px;
+    
 }
 
 .navbar-top {
@@ -43,15 +42,15 @@ h1 {
 }
 
 .navbar-brand {
-    font-family: "Rubik", serif;
-    font-weight: 700 !important;
-    font-size: 26px;
+    font-weight: 800;
+    font-family: "Roboto", sans-serif;
+    font-size: 21px;
 }
 
 .btn-modal-city {
     font-size: 14px;
     background: none;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 30px;
     padding: 10px 25px;
     color: #000;
@@ -59,21 +58,15 @@ h1 {
 
 .btn-modal-city:hover {
     font-size: 14px;
-    background: none;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.4);
     border-radius: 20px;
-    color: #000;
 }
-
-.btn-modal-city:hover .bi {
-    color: #463ee4;
-}
-
 
 .btn-modal-city:focus {
     font-size: 14px;
     background: none !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
+    border: 1px solid rgba(255,255,255,0.4) !important;
     border-radius: 20px;
 }
 
@@ -88,7 +81,7 @@ h1 {
 .header-banner {
     position: relative;
     width: 100%;
-    min-height: 540px;
+    min-height: 520px;
     background: rgba(243, 243, 255, 1);
     background-size: cover;
     z-index: 1;
@@ -100,17 +93,38 @@ h1 {
     position: absolute;
     bottom: -400px;
     z-index: -1;
-    left: 6%;
+    left: 5%;
     transform: rotate(-15deg);
 }
 
 .header-banner .container .stir-wash-top {
     display: block;
     position: absolute;
-    top: -450px;
+    top: -440px;
     z-index: -1;
-    right: 4%;
+    right: 2%;
     transform: rotate(15deg);
+}
+
+.left-text-header {
+    
+    padding: 50px 30px 50px 0px;
+}
+
+.right-img-header {
+    background: #eeeefc url("https://avatars.mds.yandex.net/i?id=74a39a279766181f047d17b4b33e3fd8_l-10815143-images-thumbs&n=13") center;
+    background-size: cover;
+    border-radius: 20px;
+    
+}
+
+.header-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 243, 255, 0.9);
+    backdrop-filter: blur(3px);
+    z-index: -1;
 }
 
 
@@ -123,12 +137,14 @@ h1 {
 }
 
 .btn-navbar:hover {
-    background: #5149f7;
+    background: #5520b8;
     border: none;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
 .btn-navbar:active {
-    background: #5149f7 !important;
+    background: #6029c7 !important;
 }
 
 .btn-navbar-outline {
@@ -142,7 +158,7 @@ h1 {
 
 .btn-navbar-outline:hover {
     background: none;
-    color: #5149f7;
+    
 }
 
 .btn-navbar-outline:active {
@@ -155,10 +171,6 @@ h1 {
     border: none;
     border-radius: 10px;
     padding: 22px 0px;
-}
-
-.input-group .form-control:hover {
-    background: #5149f7;
 }
 
 .input-group .form-control-text {

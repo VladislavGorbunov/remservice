@@ -1,5 +1,6 @@
-<div class="mt-5 mb-5 advantages-block">
-<h2 class="text-center">Почему выбирают наш сервис?</h2>
+<div class="mt-4 mb-4 advantages-block">
+<h2 class="text-center">Жители Санкт-Петербурга выбирают нас!</h2>
+<p class="text-center">Частные мастера, профессионалы, готовы оказать вам помощь без завышенных цен и комиссий!</p>
 <div class="row mt-4">
     <div class="col-4 text-center">
         <img width="90" height="90" src="https://img.icons8.com/carbon-copy/100/washing-machine.png" alt="washing-machine"/>
