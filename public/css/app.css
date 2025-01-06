@@ -51,7 +51,7 @@ h1 {
     font-size: 14px;
     background: none;
     border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 10px 25px;
     color: #000;
 }
@@ -93,8 +93,8 @@ h1 {
     position: absolute;
     bottom: -400px;
     z-index: -1;
-    left: calc(8% );
-    transform: rotate(-20deg);
+    left: 7%;
+    transform: rotate(-15deg);
 }
 
 .header-banner .container .stir-wash-top {
@@ -102,8 +102,8 @@ h1 {
     position: absolute;
     top: -440px;
     z-index: -1;
-    right: calc(8% );
-    transform: rotate(-20deg);
+    right: 7%;
+    transform: rotate(15deg);
 }
 
 .left-text-header {
@@ -166,19 +166,11 @@ h1 {
     border: none;
 }
 
-
-.input-group-layer {
-    background: rgb(70, 62, 228, 0.05);
-    padding: 13px;
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
 .input-group .form-control {
     background: #463ee4;
     border: none;
     border-radius: 10px;
-    padding: 20px;
+    padding: 22px 0px;
 }
 
 .input-group .form-control-text {
