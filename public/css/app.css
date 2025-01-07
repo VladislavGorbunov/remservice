@@ -58,16 +58,20 @@ h1 {
 
 .btn-modal-city:hover {
     font-size: 14px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 20px;
+    background: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: #000;
 }
 
 .btn-modal-city:focus {
     font-size: 14px;
-    background: none !important;
-    border: 1px solid rgba(255,255,255,0.4) !important;
-    border-radius: 20px;
+    background: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: #000;
 }
 
 .modal-dialog {
@@ -137,10 +141,8 @@ h1 {
 }
 
 .btn-navbar:hover {
-    background: #5520b8;
+    background: #4f46f3;
     border: none;
-    border-radius: 20px;
-    font-size: 14px;
 }
 
 .btn-navbar:active {
@@ -158,7 +160,7 @@ h1 {
 
 .btn-navbar-outline:hover {
     background: none;
-    
+    color: #4f46f3;
 }
 
 .btn-navbar-outline:active {
@@ -171,6 +173,11 @@ h1 {
     border: none;
     border-radius: 10px;
     padding: 22px 0px;
+}
+
+.input-group .form-control:hover {
+    background: #4f46f3;
+    cursor: pointer;
 }
 
 .input-group .form-control-text {
