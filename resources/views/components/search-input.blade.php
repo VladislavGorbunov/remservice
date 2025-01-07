@@ -7,9 +7,9 @@
         </div>
     
 
-    <div class="d-flex justify-content-center text-dark mt-4">
+    <!-- <div class="d-flex justify-content-center text-dark mt-4">
         <button class="btn-role vacancy" data-role="vacancy">Найти частного мастера</button>
          <i class="bi bi-repeat"></i> 
         <button class="btn-role resume " data-role="resume">Найти сервисный центр</button>
-    </div>   
+    </div>    -->
 </div>

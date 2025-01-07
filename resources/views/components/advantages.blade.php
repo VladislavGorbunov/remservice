@@ -1,4 +1,4 @@
-<div class="mt-4 mb-4 advantages-block">
+<div class="mt-5 mb-5 advantages-block">
 <h2 class="text-center">Жители Санкт-Петербурга выбирают нас!</h2>
 <p class="text-center">Частные мастера, профессионалы, готовы оказать вам помощь без завышенных цен и комиссий!</p>
 <div class="row mt-4">
