@@ -10,4 +10,9 @@ class Cities extends Model
     use HasFactory;
 
     protected $table = 'cities';
+
+    public function allCities()
+    {
+        echo 123;
+    }
 }
