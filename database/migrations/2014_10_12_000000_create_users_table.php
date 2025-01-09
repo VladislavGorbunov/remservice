@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('role');
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('isAdmin')->default(0);
         });
     }
 

@@ -14,18 +14,6 @@ class PagesController extends Controller
     public function index(Request $request) 
     {
         $cities = new Cities();
-        
-        //$posts = Http::get('https://jsonplaceholder.org/posts');
-        // echo '<pre>';
-        // var_dump($posts->object());
-        // echo '</pre>';
-
-
-        if (!empty(Auth::user()->name)) {
-            echo Auth::user()->name;
-        } else {
-            echo 'Не авторизован';
-        }
 
         $data = [
             'title' => 'О проекте',
