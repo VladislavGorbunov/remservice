@@ -13,10 +13,6 @@ class AuthController extends Controller
     //
     public function loginPage(Request $request)
     {
-        if (Auth::check()) {
-            return redirect()->intended('/');
-        }
-        
 
         $data = [
             'form_text' => 'Найдите сотрудников прямо сегодня!',
