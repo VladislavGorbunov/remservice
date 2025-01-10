@@ -1,6 +1,15 @@
-<x-admin.header/>
+<!-- <x-admin.header/>
+<x-admin.navbar/>
 <div class="container">
-    sdf
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <x-admin.sidebar/>
+        </div>
+        <div class="col-12 col-md-9">
+            <x-admin.content/>
+        </div>
+    </div>
 </div>
 
-<x-admin.footer/>
+<x-admin.footer/> -->
+
