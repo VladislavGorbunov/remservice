@@ -19,5 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);
     Route::get('/admin/categories', [CategoryController::class, 'allCategory']);
+    Route::get('/admin/categories/create', [CategoryController::class, 'createCategory']);
+    Route::post('/admin/categories/create', [CategoryController::class, 'createCategory']);
     
 });
