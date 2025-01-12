@@ -12,7 +12,10 @@ class CategoryController extends Controller
     //
     public function allCategory(): View
     {
-        return view('admin.all-category');
+        
+        $data['categories'] = Category::get();
+
+        return view('admin.all-category', $data);
     }
 
     public function createCategory(Request $request): View
