@@ -16,7 +16,7 @@ class AuthController extends Controller
 
         $data = [
             'form_text' => 'Найдите сотрудников прямо сегодня!',
-            'error' => $request->session()->get('status') ? $request->session()->get('status') : ''
+            'error' => $request->session()->get('error') ? $request->session()->get('error') : ''
         ];
 
         return view('site.login', $data);
@@ -35,8 +35,8 @@ class AuthController extends Controller
             $user = Auth::user();
             return redirect()->intended('profile');
         } else {
-            $request->session()->flash('status', 'Неверный логин или пароль.');
-            return redirect()->intended('login');
+            session()->flash('error', 'Неверный логин или пароль.');
+            return redirect('login');
         }
     }
 

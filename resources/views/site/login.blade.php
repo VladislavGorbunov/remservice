@@ -22,6 +22,7 @@
             <input class="form-check-input" type="checkbox" name="remember" role="switch">
             <label class="form-check-label" ><small>Запомнить меня на этом компьютере</small></label>
         </div>
+
         @if($error)
         <div class="alert alert-warning text-center mt-3" role="alert"><small>{{ $error }}</small></div>
         @endif
