@@ -17,7 +17,31 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => 'Крупная бытовая техника',
             'description' => 'Крупная бытовая техника',
-            'slug' => 'krupnaya_bitovaya_tehnika',
+            'slug' => 'krupnaya-bytovaya-tehnika',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Мелкая бытовая техника',
+            'description' => 'Мелкая бытовая техника',
+            'slug' => 'melkaya-bytovaya-tehnika',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Мелкая кухонная техника',
+            'description' => 'Мелкая кухонная техника',
+            'slug' => 'melkaya-kuhonnaya-tehnika',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Компьютерная техника',
+            'description' => 'Компьютерная техника',
+            'slug' => 'kompyuternaya-tehnika',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Офисная и оргтехника',
+            'description' => 'Офисная и оргтехника',
+            'slug' => 'ofisnaya-i-orgtehnika',
         ]);
     }
 }

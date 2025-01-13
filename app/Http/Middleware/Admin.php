@@ -17,7 +17,8 @@ class Admin
     {
         if (!$request->user()->isAdmin) {
             return redirect()->intended('/');
-        }
+        } 
+        
         return $next($request);
     }
 }

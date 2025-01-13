@@ -9,7 +9,7 @@
                 <x-admin.sidebar/>
             </div>
             <div class="col-12 col-md-9">
-                <x-admin.all-category :categories="$categories"/>
+                <x-admin.all-category :categories="$categories" :message="$message"/>
             </div>
         </div>
     </div>

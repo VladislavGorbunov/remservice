@@ -21,5 +21,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/categories', [CategoryController::class, 'allCategory']);
     Route::get('/admin/categories/create', [CategoryController::class, 'createCategory']);
     Route::post('/admin/categories/create', [CategoryController::class, 'createCategory']);
+    Route::get('/admin/categories/delete/{id}', [CategoryController::class, 'deleteCategory']);
     
 });
