@@ -9,7 +9,7 @@
     </div>
 
     <div class="col-12 col-md-3">
-        <a href="/admin/categories/create" class="btn btn-primary col-12 p-3">Добавить подкатегорию</a>        
+        <a href="/admin/subcategories/create" class="btn btn-primary col-12 p-3">Добавить подкатегорию</a>        
     </div>
 </div>
 
