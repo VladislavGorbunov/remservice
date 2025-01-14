@@ -17,7 +17,7 @@
   <textarea class="form-control" rows="4" name="description">{{ $category['description'] }}</textarea>
 </div>
 
-<button type="submit" class="btn btn-primary mt-2">Добавить категорию</button>
+<button type="submit" class="btn btn-primary mt-2">Сохранить</button>
 </form>
 
 

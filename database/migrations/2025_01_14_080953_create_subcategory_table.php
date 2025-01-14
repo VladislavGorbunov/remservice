@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->id('category_id');
+        Schema::create('subcategories', function (Blueprint $table) {
+            $table->id('subcategory_id');
             $table->string('name');
             $table->string('description')->nullable();
             $table->string('slug');
@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('teg_description')->nullable();
             $table->string('teg_keywords')->nullable();
             $table->timestamps();
+            $table->unsignedBigInteger('category_id');
+ 
+            $table->foreign('category_id')->references('category_id')->on('categories');
         });
     }
 
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('subcategories');
     }
 };
