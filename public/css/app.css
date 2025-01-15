@@ -132,6 +132,7 @@ h1 {
 }
 
 
+
 .btn-navbar {
     background: #463ee4;
     border: none;
@@ -281,3 +282,45 @@ h1, h2 {
     font-weight: 600;
 }
 
+.avatar {
+    border-radius: 50%;
+}
+
+.btn-get-profile {
+    background: #463ee4;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 27px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.btn-get-profile:hover {
+    background: #4f46f3;
+    color: #fff;
+}
+
+.badge-block {
+    position: absolute;
+    max-width: 200px;
+}
+
+.badge-free-exit {
+    display: inline-block;
+    background: gold;
+    color: rgb(59, 51, 0);
+    font-size: 14px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 0px 0 15px 0;
+}
+
+.badge-warranty {
+    display: inline-block;
+    background: gold;
+    color: rgb(59, 51, 0);
+    font-size: 14px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 0px 0 15px 0;
+}
