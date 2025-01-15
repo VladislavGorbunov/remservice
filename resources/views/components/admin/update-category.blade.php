@@ -1,4 +1,4 @@
-<h2 class="mb-3">Создание категории</h2>
+<h2 class="mb-3">Редактирование категории</h2>
 
 <form action="" method="post">
 @csrf

@@ -13,7 +13,10 @@ class CategoryController extends Controller
     //
     public function allCategory(Request $request): View
     {
+        $subcategories = Category::find(1)->subcategories; // Отношение один ко многим. Получение подкатегорий категории
+        $data['subcategories'] = $subcategories; 
         $data['categories'] = Category::paginate(10);
+        
         $data['message'] = $request->session()->get('message') ? $request->session()->get('message') : '';
         return view('admin.all-category', $data);
     }

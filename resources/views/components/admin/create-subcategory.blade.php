@@ -13,7 +13,7 @@
   <select class="form-select" name="category_id">
 
   @foreach ($category as $cat)
-    <option value="{{ $cat['category_id'] }}">{{ $cat['name'] }}</option>
+    <option value="{{ $cat['id'] }}">{{ $cat['name'] }}</option>
 
   @endforeach
     

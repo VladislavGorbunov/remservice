@@ -1,0 +1,1 @@
+<div class="alert alert-warning text-center" role="alert"><small>{{ $message }}</small></div>

@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
+use App\Http\Controllers\Admin\RegionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,4 +30,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/subcategories', [SubCategoryController::class, 'allSubCategory']);
     Route::get('/admin/subcategories/create', [SubCategoryController::class, 'createSubCategory']);
     Route::post('/admin/subcategories/create', [SubCategoryController::class, 'createSubCategory']);
+    Route::get('/admin/subcategories/edit/{id}', [SubCategoryController::class, 'editSubCategory']);
+    Route::post('/admin/subcategories/edit/{id}', [SubCategoryController::class, 'editSubCategory']);
+    Route::get('/admin/subcategories/delete/{id}', [SubCategoryController::class, 'deleteSubCategory']);
+
+    Route::get('/admin/regions', [RegionController::class, 'allregions']);
 });

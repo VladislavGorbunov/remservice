@@ -28,7 +28,7 @@ class SubCategoryController extends Controller
                 'slug' => $request->slug,
             ]);
 
-            session()->flash('message', 'Категория "' .$request->name. '" создана.');
+            session()->flash('message', 'Подкатегория "' .$request->name. '" создана.');
             return redirect()->action([SubCategoryController::class, 'allSubCategory']);
         }
 
@@ -39,33 +39,36 @@ class SubCategoryController extends Controller
 
     public function editSubCategory(Request $request, $id)
     {
-        $category = SubCategory::find($id);
+        $subcategory = SubCategory::find($id);
+        
 
         if ($request->method() == 'POST') {
-            $category->name = $request->name;
-            $category->slug = $request->slug;
-            $category->description = $request->description;
-            $category->save();
-            session()->flash('message', 'Категория "' .$request->name. '" изменена.');
-            return redirect('/admin/categories');
+            $subcategory->name = $request->name;
+            $subcategory->slug = $request->slug;
+            $subcategory->id = $request->category_id;
+            $subcategory->description = $request->description;
+            $subcategory->save();
+            session()->flash('message', 'Подкатегория "' .$request->name. '" изменена.');
+            return redirect('/admin/subcategories');
         }
 
-        $data['category'] = $category;
-
-        return view('admin.update-category', $data);
+        $data['subcategory'] = $subcategory;
+        $data['category'] = Category::get();
+        
+        return view('admin.update-subcategory', $data);
     }
 
-    public function deleteCategory(Request $request, $id)
+    public function deleteSubCategory(Request $request, $id)
     {
-        $category = SubCategory::find($id);
+        $subcategory = SubCategory::find($id);
 
-        if ($category) {
-            $category->delete();
-            session()->flash('message', 'Категория "'. $category['name'] .'" удалена.');
+        if ($subcategory) {
+            $subcategory->delete();
+            session()->flash('message', 'Подкатегория "'. $subcategory['name'] .'" удалена.');
         } else {
-            session()->flash('message', 'Категории с таким id не найдено.');
+            session()->flash('message', 'Подкатегории с таким id не найдено.');
         }
         
-        return redirect('/admin/categories');
+        return redirect('/admin/subcategories');
     }
 }

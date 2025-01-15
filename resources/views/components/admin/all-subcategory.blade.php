@@ -1,10 +1,10 @@
 <div class="row mb-3">
-    <h2 class="mb-3">Категории</h2>
+    <h2 class="mb-3">Подкатегории</h2>
     <div class="col-12 col-md-9">
     @if($message)
-        <div class="alert alert-warning text-center" role="alert"><small>{{ $message }}</small></div>
+        <x-admin.alert-message :message="$message"/>
     @else
-        <div class="alert alert-success text-center" role="alert"><small>Сообщений нет.</small></div>
+        <x-admin.alert-message :message="$message = 'Сообщений нет.'"/>
     @endif
     </div>
 
@@ -26,17 +26,17 @@
   
   @foreach($subcategories as $category) 
     <tr>
-      <th scope="row">{{ $category['subcategory_id'] }}</th>
+      <th scope="row">{{ $category['id'] }}</th>
       <td>{{ $category['name'] }}</td>
       <td>{{ $category['slug'] }}</td>
       <td>
         <div class="row">
             <div class="col">
-                <a href="{{URL::current()}}/edit/{{ $category['category_id'] }}">Изменить</a> 
+                <a href="{{URL::current()}}/edit/{{ $category['id'] }}">Изменить</a> 
             </div>
 
             <div class="col">
-                <a href="{{URL::current()}}/delete/{{ $category['category_id'] }}">Удалить</a>
+                <a href="{{URL::current()}}/delete/{{ $category['id'] }}">Удалить</a>
             </div>
         </div>
       </td>
