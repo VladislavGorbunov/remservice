@@ -7,16 +7,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-          
+          <div class="row"> 
             @foreach ($cities as $city) 
-                {{$city->name}}
+            <div class="col-4">
+                <a href="{{$city->slug}}">{{$city->name}}</a>
+            </div>
             @endforeach
-            
+          </div>
         
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

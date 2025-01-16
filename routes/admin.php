@@ -34,5 +34,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/admin/subcategories/edit/{id}', [SubCategoryController::class, 'editSubCategory']);
     Route::get('/admin/subcategories/delete/{id}', [SubCategoryController::class, 'deleteSubCategory']);
 
-    Route::get('/admin/regions', [RegionController::class, 'allregions']);
+    Route::get('/admin/regions', [RegionController::class, 'allRegions']);
+    Route::get('/admin/regions/create', [RegionController::class, 'createRegion']);
+    Route::post('/admin/regions/create', [RegionController::class, 'createRegion']);
 });

@@ -74,8 +74,25 @@ h1 {
     color: #000;
 }
 
+@media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+}
+
 .modal-dialog {
     z-index: 999;
+}
+
+.modal-dialog a {
+    color: #463ee4 !important;
+    text-decoration: none;
+}
+
+.modal-content {
+    padding: 10px 30px;
 }
 
 .bi-person-arms-up {

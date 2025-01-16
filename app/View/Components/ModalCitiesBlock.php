@@ -5,7 +5,7 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use App\Models\Cities;
+use App\Models\Region;
 
 class ModalCitiesBlock extends Component
 {
@@ -16,8 +16,8 @@ class ModalCitiesBlock extends Component
     public function __construct()
     {
         //
-        $cityModel = new Cities();
-        $this->cities = $cityModel->all();
+        // $cityModel = new Cities();
+        $this->cities = Region::get();
     }
 
     /**

@@ -10,6 +10,7 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
+
     //
     public function allCategory(Request $request): View
     {
@@ -26,7 +27,7 @@ class CategoryController extends Controller
         if ($request->method() == 'POST') {
             Category::create([
                 'name' => $request->name,
-                'slug' => $request->slug,
+                'slug' => $this->translit($request->name),
             ]);
 
             return redirect()->action([CategoryController::class, 'allCategory']);
@@ -41,7 +42,7 @@ class CategoryController extends Controller
 
         if ($request->method() == 'POST') {
             $category->name = $request->name;
-            $category->slug = $request->slug;
+            $category->slug = $this->translit($request->slug);
             $category->description = $request->description;
             $category->save();
             session()->flash('message', 'Категория "' .$request->name. '" изменена.');
@@ -66,4 +67,6 @@ class CategoryController extends Controller
         
         return redirect('/admin/categories');
     }
+
+
 }

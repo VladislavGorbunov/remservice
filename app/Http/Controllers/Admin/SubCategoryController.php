@@ -25,7 +25,7 @@ class SubCategoryController extends Controller
             SubCategory::create([
                 'name' => $request->name,
                 'category_id' => $request->category_id,
-                'slug' => $request->slug,
+                'slug' => $this->translit($request->name),
             ]);
 
             session()->flash('message', 'Подкатегория "' .$request->name. '" создана.');
@@ -44,8 +44,8 @@ class SubCategoryController extends Controller
 
         if ($request->method() == 'POST') {
             $subcategory->name = $request->name;
-            $subcategory->slug = $request->slug;
-            $subcategory->id = $request->category_id;
+            $subcategory->slug = $this->translit($request->name);
+            $subcategory->category_id = $request->category_id;
             $subcategory->description = $request->description;
             $subcategory->save();
             session()->flash('message', 'Подкатегория "' .$request->name. '" изменена.');

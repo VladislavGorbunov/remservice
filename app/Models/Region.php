@@ -5,14 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cities extends Model
+class Region extends Model
 {
     use HasFactory;
 
-    protected $table = 'cities';
-
-    public function allCities()
-    {
-        echo 123;
-    }
+    public $timestamps = false;
+    protected $fillable = ['name', 'name_in', 'slug'];
 }
