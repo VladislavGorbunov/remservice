@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-headers :region="$region"/>
+    <x-headers :regionNameIn="$regionNameIn" :regionName="$regionName"/>
 
     <div class="container">
         <x-advantages/>

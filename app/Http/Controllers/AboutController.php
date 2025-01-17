@@ -13,6 +13,6 @@ class AboutController extends Controller
             'title' => 'О проекте',
         ];
 
-        return view('site.index', $data);
+        return view('site.about', $data);
     }
 }

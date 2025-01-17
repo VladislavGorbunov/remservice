@@ -1,3 +1,3 @@
-<x-navbar/>
-<x-header-banner :region="$region" />
+<x-navbar :regionName="$regionName"/>
+<x-header-banner :regionNameIn="$regionNameIn"/>
   

@@ -17,7 +17,9 @@ class PagesController extends Controller
         
         if (!$region) abort(404);
 
-        $data['region'] = $region->name_in;
+        $data['regionName'] = $region->name;
+        $data['regionNameIn'] = $region->name_in;
+        $data['title'] = 'Сайт';
             
         return view('site.index', $data);
     }

@@ -116,6 +116,10 @@ h1 {
     z-index: -1;
     left: 5%;
     transform: rotate(-15deg);
+    animation-name: wash-animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .header-banner .container .stir-wash-top {
@@ -125,6 +129,34 @@ h1 {
     z-index: -1;
     right: 2%;
     transform: rotate(15deg);
+    animation-name: wash-animation-top;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wash-animation {
+    from {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(-18deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes wash-animation-top {
+    from {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(18deg);
+    }
+    to {
+        transform: rotate(15deg);
+    }
 }
 
 .left-text-header {
@@ -132,12 +164,6 @@ h1 {
     padding: 50px 30px 50px 0px;
 }
 
-.right-img-header {
-    background: #eeeefc url("https://avatars.mds.yandex.net/i?id=74a39a279766181f047d17b4b33e3fd8_l-10815143-images-thumbs&n=13") center;
-    background-size: cover;
-    border-radius: 20px;
-    
-}
 
 .header-layer {
     position: absolute;

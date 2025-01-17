@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/{region}', [PagesController::class, 'index']);
+
 
 Route::get('/', [PagesController::class, 'index']);
+
+Route::get('/about', [AboutController::class, 'index']);
+
+Route::get('/{region}', [PagesController::class, 'index']);
 
 Route::get('login', [AuthController::class, 'loginPage'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
