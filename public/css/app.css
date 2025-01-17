@@ -47,6 +47,10 @@ h1 {
     font-size: 21px;
 }
 
+.bi-question-circle-fill {
+    color:rgb(23, 170, 79);
+}
+
 .btn-modal-city {
     font-size: 14px;
     background: none;

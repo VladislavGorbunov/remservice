@@ -20,6 +20,9 @@
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
           <a class="nav-link">Реклама</a>
         </li>
+        <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
+          <a class="nav-link">Задать вопрос мастерам <i class="bi bi-question-circle-fill"></i></a>
+        </li>
       </ul>
       <form class="d-flex justify-content-center" role="search">
         <a href="{{ route('login') }}" class="btn btn-success btn-navbar-outline mx-1" type="submit">Клиентам</a>
