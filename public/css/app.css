@@ -74,6 +74,19 @@ h1 {
     color: #000;
 }
 
+.btn-modal-city:active {
+    font-size: 14px;
+    background: none !important;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: #000 !important;
+}
+
+.btn-modal-city .bi-cursor-fill {
+    color: #463ee4;
+}
+
 @media (min-width: 576px) {
     .modal-dialog {
       max-width: 600px;
@@ -117,7 +130,7 @@ h1 {
     left: 5%;
     transform: rotate(-15deg);
     animation-name: wash-animation;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
@@ -140,7 +153,7 @@ h1 {
         transform: rotate(-15deg);
     }
     50% {
-        transform: rotate(-18deg);
+        transform: rotate(-19deg);
     }
     to {
         transform: rotate(-15deg);
@@ -152,7 +165,7 @@ h1 {
         transform: rotate(15deg);
     }
     50% {
-        transform: rotate(18deg);
+        transform: rotate(22deg);
     }
     to {
         transform: rotate(15deg);
@@ -210,6 +223,7 @@ h1 {
 .btn-navbar-outline:active {
     background: rgba(255,255,255,0.1) !important;
     border: none;
+    color: #000 !important;
 }
 
 .input-group .form-control {
@@ -366,4 +380,10 @@ h1, h2 {
     padding: 7px 10px;
     margin-bottom: 10px;
     border-radius: 0px 0 15px 0;
+}
+
+.footer-bg {
+    background-color: rgba(243, 243, 255, 1);
+    bottom: 0;
+    height: 300px;
 }
