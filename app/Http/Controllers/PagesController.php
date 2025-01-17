@@ -11,16 +11,14 @@ use App\Models\User;
 class PagesController extends Controller
 {
     // Гланая страница
-    public function index(Request $request) 
+    public function index(Request $request, $region = '/') 
     {
-    
-
-        $data = [
-            'title' => 'О проекте',
-           
-            //'posts' => $posts->object()
-        ];
+        $region = Region::where('slug', $region)->first();
         
+        if (!$region) abort(404);
+
+        $data['region'] = $region->name_in;
+            
         return view('site.index', $data);
     }
 }

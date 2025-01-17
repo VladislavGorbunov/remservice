@@ -8,11 +8,10 @@ use Illuminate\View\Component;
 use App\Models\Region;
 
 
-class ModalCitiesBlock extends Component
+class ModalCities extends Component
 {
     public $cities = 13;
-    
-  
+    public $name = 4234;
     /**
      * Create a new component instance.
      */
@@ -26,6 +25,6 @@ class ModalCitiesBlock extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.modal-cities-block');
+        return view('components.modal-cities');
     }
 }

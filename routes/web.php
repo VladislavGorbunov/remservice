@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/{region}', [PagesController::class, 'index']);
 
 Route::get('/', [PagesController::class, 'index']);
 
