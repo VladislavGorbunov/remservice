@@ -17,13 +17,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+require __DIR__.'/admin.php';
 
 Route::get('/', [PagesController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'index']);
 
-Route::get('/{region}', [PagesController::class, 'index']);
+
 
 Route::get('login', [AuthController::class, 'loginPage'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
@@ -40,4 +40,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/admin.php';
+Route::get('/{region}', [PagesController::class, 'index']);
+
+
