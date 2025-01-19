@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\Region;
 use App\Models\User;
+use App\Models\Category;
 
 class PagesController extends Controller
 {
@@ -21,6 +22,15 @@ class PagesController extends Controller
         $data['regionName'] = $region->name;
         $data['regionNameIn'] = $region->name_in;
         $data['title'] = 'Сайт';
+
+        $categories = Category::with('subcategories')->get();
+
+        foreach ($categories as $category) {
+            echo $category->name;
+            foreach ($category->subcategories as $subcat) {
+                echo $subcat->name;
+            }
+        }
             
         return view('site.index', $data);
     }
