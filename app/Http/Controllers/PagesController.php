@@ -13,6 +13,7 @@ class PagesController extends Controller
     // Гланая страница
     public function index(Request $request, $region = '/') 
     {
+       
         $region = Region::where('slug', $region)->first();
         
         if (!$region) abort(404);
