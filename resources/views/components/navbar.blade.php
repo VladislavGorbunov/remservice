@@ -1,6 +1,9 @@
 <nav class="navbar navbar-light navbar-expand-lg">
   <div class="container">
-  <a class="navbar-brand" href="/"><span style="color:#463ee4">ЗА</span>МАСТЕРОМ</a>
+  <div class="" href="/">
+    <span class="navbar-brand"><span style="color:#463ee4">ЗА</span>МАСТЕРОМ</span>
+    <p class="logo-bottom-text">МАРКЕТПЛЕЙС <span style="color:#463ee4">ПО РЕМОНТУ</span></p>
+  </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
