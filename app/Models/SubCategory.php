@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class SubCategory extends Model
 {
     use HasFactory;
+    
     protected $table = 'subcategories';
-    // protected $primaryKey = 'subcategory_id';
+    
     protected $fillable = ['name', 'category_id', 'description', 'slug'];
 
     public function category(): BelongsTo
