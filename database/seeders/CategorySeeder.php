@@ -40,8 +40,26 @@ class CategorySeeder extends Seeder
 
         DB::table('categories')->insert([
             'name' => 'Офисная и оргтехника',
-            'description' => 'Офисная и оргтехника',
-            'slug' => 'ofisnaya-i-orgtehnika',
+            'description' => 'Мастера по ремонту офисной и оргтехники',
+            'slug' => 'remont-ofisnoy-i-orgtehniki',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Климатическая техника',
+            'description' => 'Мастера по ремонту климатической техники',
+            'slug' => 'remont-klimaticheskoy-tehniki',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Электротранспорт',
+            'description' => 'Мастера по ремонту электротранспорта',
+            'slug' => 'remont-elektrotransporta',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Электроинструмент',
+            'description' => 'Мастера по ремонту электроинструмента',
+            'slug' => 'remont-elektroinstrumenta',
         ]);
     }
 }

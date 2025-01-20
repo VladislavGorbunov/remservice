@@ -24,7 +24,7 @@ class PagesController extends Controller
         $data['title'] = 'Сайт';
 
         $data['categories'] = Category::with('subcategories')->get();
-            
+
         return view('site.index', $data);
     }
 }

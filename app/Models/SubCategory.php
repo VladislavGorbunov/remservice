@@ -11,4 +11,9 @@ class SubCategory extends Model
     protected $table = 'subcategories';
     // protected $primaryKey = 'subcategory_id';
     protected $fillable = ['name', 'category_id', 'description', 'slug'];
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
