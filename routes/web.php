@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\MastersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,7 @@ Route::get('login', [AuthController::class, 'loginPage'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('registration', [RegistrationController::class, 'registration'])->name('registration');
+Route::get('for-the-masters', [MastersController::class, 'index'])->name('for-the-masters');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
