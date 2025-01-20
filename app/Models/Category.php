@@ -16,6 +16,6 @@ class Category extends Model
     
     public function subcategories(): HasMany
     {
-        return $this->hasMany(SubCategory::class);
+        return $this->hasMany(SubCategory::class)->limit(6);
     }
 }

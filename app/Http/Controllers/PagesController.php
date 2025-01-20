@@ -36,7 +36,7 @@ class PagesController extends Controller
         $data['regionNameIn'] = $region->name_in;
         $data['title'] = 'Сайт';
 
-        $data['categories'] = Category::with('subcategories')->get();
+        $data['categories'] = Category::get();
 
         return view('site.index', $data);
     }
