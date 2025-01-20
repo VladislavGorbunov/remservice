@@ -6,7 +6,7 @@
 
     <div class="container">
         <x-advantages/>
-        <x-catalog-of-services/>
+        <x-catalog-of-services :categories="$categories"/>
         <x-top-masters/>
     </div>
     <x-footer/>
