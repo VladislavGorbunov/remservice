@@ -31,4 +31,24 @@ class RegionController extends Controller
 
         return view('admin.create-region');
     }
+
+
+    public function editRegion(Request $request, $id)
+    {
+        $region = Region::find($id);
+
+        if ($request->method() == 'POST') {
+            $region->name = $request->name;
+            $region->name_in = $request->name_in;
+            $region->slug = $request->slug;
+            
+            $region->save();
+            session()->flash('message', 'Регион "' .$request->name. '" изменён.');
+            return redirect('/admin/regions');
+        }
+
+        $data['region'] = $region;
+
+        return view('admin.update-region', $data);
+    }
 }

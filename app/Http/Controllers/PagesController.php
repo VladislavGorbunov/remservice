@@ -12,7 +12,20 @@ use App\Models\Category;
 class PagesController extends Controller
 {
     // Гланая страница
-    public function index(Request $request, $region = '/') 
+    public function index(Request $request) 
+    {
+
+        $data['regionName'] = null;
+        $data['regionNameIn'] = null;
+        $data['title'] = 'Сайт';
+
+        $data['categories'] = Category::with('subcategories')->get();
+
+        return view('site.index', $data);
+    }
+
+
+    public function regionsPage(Request $request, $region = '/') 
     {
        
         $region = Region::where('slug', $region)->first();

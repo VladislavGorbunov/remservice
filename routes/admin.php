@@ -37,4 +37,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/regions', [RegionController::class, 'allRegions']);
     Route::get('/admin/regions/create', [RegionController::class, 'createRegion']);
     Route::post('/admin/regions/create', [RegionController::class, 'createRegion']);
+    Route::get('/admin/regions/edit/{id}', [RegionController::class, 'editRegion']);
+    Route::post('/admin/regions/edit/{id}', [RegionController::class, 'editRegion']);
 });

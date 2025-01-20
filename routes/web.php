@@ -40,6 +40,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/{region}', [PagesController::class, 'index']);
+Route::get('/{region}', [PagesController::class, 'regionsPage']);
 
 
