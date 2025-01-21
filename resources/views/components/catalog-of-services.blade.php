@@ -1,4 +1,4 @@
-<div class="mt-5 mb-5">
+<div class="mt-5 mb-5 bg-color">
 <h2 class="text-center">Найдём мастера по ремонту любой техники</h2>
 <p class="text-center">Выбирете технику которая нуждается в ремонте</p>
 <div class="row">
@@ -6,6 +6,7 @@
     <style>
         .list-group-item {
             padding: 7px 0;
+            background: none;
         }
     </style>
 

@@ -149,6 +149,12 @@ h1 {
     color: rgb(19, 210, 93);
 }
 
+.bg-color {
+    background: rgba(243, 243, 255, 1);
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
 .header-banner {
     position: relative;
     width: 100%;
