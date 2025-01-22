@@ -230,7 +230,19 @@ h1 {
     z-index: -1;
 }
 
+.btn-primary-registr {
+    background: #463ee4;
+    border: none;
+    max-width: 250px;
+    border-radius: 10px;
+    padding: 14px 30px;
+    font-size: 16px;
+    color: #fff;
+}
 
+.btn-primary-registr:hover {
+    color: #fff;
+}
 
 .btn-navbar {
     background: #463ee4;
@@ -238,15 +250,18 @@ h1 {
     border-radius: 10px;
     padding: 12px 30px;
     font-size: 14px;
+    color: #fff;
 }
 
 .btn-navbar:hover {
     background: #4f46f3;
     border: none;
+    color: #fff;
 }
 
 .btn-navbar:active {
     background: #4f46f3 !important;
+    color: #fff;
 }
 
 .btn-navbar-outline {
@@ -430,3 +445,11 @@ h1, h2 {
     bottom: 0;
     height: 300px;
 }
+
+footer .nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: #111;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }

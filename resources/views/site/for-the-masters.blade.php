@@ -15,6 +15,8 @@
                 <p><b>Для мастеров это</b> отличная возможность получать больше заявок на ремонт, а следовательно 
                 и больше зарабатывать!
             </p>
+
+            <a href="/for-the-masters/registration" class="btn btn-primary-registr mb-5">Зарегистрироваться</a>
         </div>
         <div class="col-12 col-md-6">
             <img src="https://sdelkaveka.com/_bd/14/72433738.jpg" class="img-fluid">
@@ -54,41 +56,8 @@
     </li>
     
 </ul>
-    <div class="mb-5">
-    <h2 class="text-center mt-5 mb-4">С нами <span style="color:#463ee4">выгодно и удобно </span>работать</h2>
-    <div class="row">
-        <div class="col-12 col-md-3">
-            <h5 class="text-center">Цену назначаете вы</h5>
-            <p class="text-center">
-                Мы не диктуем правила, Вы профессионал, а значит 
-                сами можете оценить стоимость своей работы.
-            </p>
-        </div>
-        
-        <div class="col-12 col-md-3">
-            <h5 class="text-center">Цену назначаете вы</h5>
-            <p class="text-center">
-                Мы не диктуем правила, Вы профессионал, а значит 
-                сами можете оценить стоимость своей работы.
-            </p>
-        </div>
-
-        <div class="col-12 col-md-3">
-            <h5 class="text-center">Цену назначаете вы</h5>
-            <p class="text-center">
-                Мы не диктуем правила, Вы профессионал, а значит 
-                сами можете оценить стоимость своей работы.
-            </p>
-        </div>
-
-        <div class="col-12 col-md-3">
-            <h5 class="text-center">Цену назначаете вы</h5>
-            <p class="text-center">
-                Мы не диктуем правила, Вы профессионал, а значит 
-                сами можете оценить стоимость своей работы.
-            </p>
-        </div>
-    </div>
-    </div>
+    
+    <a href="/for-the-masters/registration" class="btn btn-primary-registr d-block mx-auto mb-5">Зарегистрироваться</a>
+    
 </div>
 @endsection

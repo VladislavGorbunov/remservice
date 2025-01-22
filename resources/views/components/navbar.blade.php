@@ -28,8 +28,8 @@
         </li>
       </ul>
       <form class="d-flex justify-content-center" role="search">
-        <a href="{{ route('login') }}" class="btn btn-success btn-navbar-outline mx-1" type="submit">Клиентам</a>
-        <a href="{{ route('for-the-masters') }}" class="btn btn-success btn-navbar mx-1" type="submit">Специалистам</a>
+        <a href="{{ route('login') }}" class="btn btn-navbar-outline mx-1" type="submit">Клиентам</a>
+        <a href="{{ route('for-the-masters') }}" class="btn btn-navbar mx-1" type="submit">Специалистам</a>
       </form>
     </div>
   </div>
