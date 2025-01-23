@@ -165,7 +165,17 @@ h1 {
     overflow: hidden;
 }
 
-.header-banner .container .stir-wash {
+.header-banner-short {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    background: rgba(243, 243, 255, 1);
+    background-size: cover;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.stir-wash {
     display: block;
     position: absolute;
     bottom: -400px;
@@ -178,7 +188,7 @@ h1 {
     animation-timing-function: ease-in-out;
 }
 
-.header-banner .container .stir-wash-top {
+.stir-wash-top {
     display: block;
     position: absolute;
     top: -440px;

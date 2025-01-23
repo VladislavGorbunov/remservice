@@ -10,7 +10,7 @@
           <div class="row"> 
             @foreach ($cities as $city) 
             <div class="col-4">
-                <a href="{{$city->slug}}">{{$city->name}}</a>
+                <a href="/{{$city->slug}}">{{$city->name}}</a>
             </div>
             @endforeach
           </div>

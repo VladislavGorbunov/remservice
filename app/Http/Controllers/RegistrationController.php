@@ -7,7 +7,16 @@ use Illuminate\Http\Request;
 class RegistrationController extends Controller
 {
     //
-    public function registration()
+    public function registrationMaster()
+    {
+        $data['regionName'] = null;
+        $data['regionNameIn'] = null;
+        $data['title'] = 'Сайт';
+        $data['headerTitle'] = 'Регистрация мастера';
+        return view('site.master-registration', $data);
+    }
+
+    public function registrationClient()
     {
         
     }

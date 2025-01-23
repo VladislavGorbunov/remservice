@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-lg">
   <div class="container">
-  <div class="" href="/">
+  <div class="">
     <span class="navbar-brand"><span style="color:#463ee4">ЗА</span>МАСТЕРОМ</span>
     <p class="logo-bottom-text">НАЙДИТЕ ЛУЧШЕГО МАСТЕРА <span style="color:#463ee4"></span></p>
   </div>
@@ -12,7 +12,7 @@
     <x-modal-city :regionName="$regionName"/>
       <ul class="navbar-nav me-auto text-center py-5 py-md-0">
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
-          <a class="nav-link" href="#">Главная</a>
+          <a class="nav-link" href="/">Главная</a>
         </li>
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
           <a class="nav-link" href="/about">О проекте</a>

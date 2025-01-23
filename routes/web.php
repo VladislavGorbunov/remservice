@@ -28,9 +28,10 @@ Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('login', [AuthController::class, 'loginPage'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('logout', [AuthController::class, 'logout']);
 Route::get('registration', [RegistrationController::class, 'registration'])->name('registration');
 Route::get('for-the-masters', [MastersController::class, 'index'])->name('for-the-masters');
+Route::get('for-the-masters/registration', [RegistrationController::class, 'registrationMaster'])->name('registration-master');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
