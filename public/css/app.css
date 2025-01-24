@@ -178,52 +178,29 @@ h1 {
 .stir-wash {
     display: block;
     position: absolute;
-    bottom: -400px;
+    width: 400px;
+    height: 400px;
+    bottom: -260px;
     z-index: -1;
-    left: 5%;
+    left: 15%;
+    background: url("/images/header-wash.png") top center;
+    background-size: cover;
     transform: rotate(-15deg);
-    animation-name: wash-animation;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
 }
 
 .stir-wash-top {
     display: block;
     position: absolute;
-    top: -440px;
+    width: 400px;
+    height: 400px;
+    top: -320px;
     z-index: -1;
-    right: 2%;
+    right: 15%;
+    background: url("/images/header-wash.png") bottom center;
+    background-size: cover;
     transform: rotate(15deg);
-    animation-name: wash-animation-top;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
 }
 
-@keyframes wash-animation {
-    from {
-        transform: rotate(-15deg);
-    }
-    50% {
-        transform: rotate(-19deg);
-    }
-    to {
-        transform: rotate(-15deg);
-    }
-}
-
-@keyframes wash-animation-top {
-    from {
-        transform: rotate(15deg);
-    }
-    50% {
-        transform: rotate(22deg);
-    }
-    to {
-        transform: rotate(15deg);
-    }
-}
 
 .left-text-header {
     

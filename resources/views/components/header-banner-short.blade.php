@@ -6,8 +6,8 @@
             
             </div>
         </div>  
-        <img width="800"  src="https://vsestiralnie.com/upload/iblock/f7a/ru_washer_wf60f1r1f2wdlp_wf60f1r1f2wdlp_001_front_PD_GALLERY_L_JPG_.png" alt="tumble-dryer" class="stir-wash-top"/>
-        <img width="800"  src="https://vsestiralnie.com/upload/iblock/f7a/ru_washer_wf60f1r1f2wdlp_wf60f1r1f2wdlp_001_front_PD_GALLERY_L_JPG_.png" alt="tumble-dryer" class="stir-wash"/>
+        <div class="stir-wash-top"></div>
+        <div class="stir-wash"></div>
     </div>
 </div>
 
