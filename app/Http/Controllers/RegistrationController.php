@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class RegistrationController extends Controller
 {
@@ -13,6 +14,9 @@ class RegistrationController extends Controller
         $data['regionNameIn'] = null;
         $data['title'] = 'Сайт';
         $data['headerTitle'] = 'Регистрация мастера';
+
+        $data['categories'] = Category::get();
+
         return view('site.master-registration', $data);
     }
 

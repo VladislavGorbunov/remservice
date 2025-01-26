@@ -22,6 +22,8 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->integer('isAdmin')->default(0);
+            $table->integer('isMaster')->default(0);
+            $table->integer('isClient')->default(0);
         });
     }
 

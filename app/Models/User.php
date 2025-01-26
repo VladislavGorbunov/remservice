@@ -46,12 +46,21 @@ class User extends Authenticatable
     ];
 
 
-    public static function isAdmin()
-    {
-        if (Auth::user()->admin) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    // public static function isAdmin()
+    // {
+    //     if (Auth::user()->admin) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+    // public static function isMaster()
+    // {
+    //     if (Auth::user()->master) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
 }

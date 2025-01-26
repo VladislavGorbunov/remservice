@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 require __DIR__.'/admin.php';
+require __DIR__.'/panel.php';
 
 Route::get('/', [PagesController::class, 'index']);
 
