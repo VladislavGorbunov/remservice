@@ -7,18 +7,20 @@
     <div class="col-12 col-md-12 d-block mx-auto mt-3">
         
     <h3 class="mt-4 mb-3">Личные данные</h3>
-
+    <form action="" method="POST" >
     <div class="row">
         <style>
             .avatar-input {
                 width: 200px;
                 height: 200px;
-                background: #111;
+                border-radius: 10px;
+                background: #ccc;
             }
         </style>
 
-    <div class="col-12 col-md-4">
-        <div class="avatar-input"></div>
+    <div class="col-12 col-md-2">
+        <div class="avatar-input mt-2"></div>
+        <input type="file" name="avatar" class="mt-3">
     </div>
 
     <script>
@@ -27,16 +29,22 @@
         input.setAttribute('type', 'file')
         input.setAttribute('name', 'avatar')
 
-        avatar_input.addEventListener("click", () => {
-            input.click()
-        })
+        avatar_input.addEventListener("click", openInput)
 
-        avatar_input.addEventListener("check", () => {
-            console.log(123)
-        })
+        input.addEventListener("change", uploadAvatar)
+
+        function openInput() {
+            input.click()
+        }
+
+        function uploadAvatar() {
+            avatar_input.style.background = "#222"
+        }
+
+        
     </script>
 
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-5">
         <div class="mb-3">
             <label class="form-label"><b>Ваше имя:</b></label>
             <input type="text" class="form-control" placeholder="">
@@ -62,7 +70,7 @@
     </div>
 
 
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-5">
         <div class="mb-3">
             <label class="form-label"><b>Электронная почта:</b> (<small>На эту почту будут приходить заявки</small>)</label>
             <input type="email" class="form-control" placeholder="">
