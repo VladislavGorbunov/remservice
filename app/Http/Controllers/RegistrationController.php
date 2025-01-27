@@ -24,4 +24,10 @@ class RegistrationController extends Controller
     {
         
     }
+
+    public function insertMaster(Request $request) 
+    {
+        $post = $request->post();
+        $avatar = $request->file();
+    }
 }

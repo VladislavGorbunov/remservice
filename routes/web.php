@@ -33,6 +33,7 @@ Route::get('logout', [AuthController::class, 'logout']);
 Route::get('registration', [RegistrationController::class, 'registration'])->name('registration');
 Route::get('for-the-masters', [MastersController::class, 'index'])->name('for-the-masters');
 Route::get('for-the-masters/registration', [RegistrationController::class, 'registrationMaster'])->name('registration-master');
+Route::post('for-the-masters/registration', [RegistrationController::class, 'insertMaster']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
