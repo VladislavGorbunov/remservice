@@ -9,8 +9,34 @@
     <h3 class="mt-4 mb-3">Личные данные</h3>
 
     <div class="row">
+        <style>
+            .avatar-input {
+                width: 200px;
+                height: 200px;
+                background: #111;
+            }
+        </style>
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-4">
+        <div class="avatar-input"></div>
+    </div>
+
+    <script>
+        const avatar_input = document.querySelector('.avatar-input')
+        const input = document.createElement('input')
+        input.setAttribute('type', 'file')
+        input.setAttribute('name', 'avatar')
+
+        avatar_input.addEventListener("click", () => {
+            input.click()
+        })
+
+        avatar_input.addEventListener("check", () => {
+            console.log(123)
+        })
+    </script>
+
+    <div class="col-12 col-md-4">
         <div class="mb-3">
             <label class="form-label"><b>Ваше имя:</b></label>
             <input type="text" class="form-control" placeholder="">
@@ -36,7 +62,7 @@
     </div>
 
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-4">
         <div class="mb-3">
             <label class="form-label"><b>Электронная почта:</b> (<small>На эту почту будут приходить заявки</small>)</label>
             <input type="email" class="form-control" placeholder="">
@@ -94,9 +120,37 @@
     </div>
 
 
-    <h3 class="mt-3">Дополнительная информация</h3>
+    <h3 class="mt-3 mb-3">Дополнительная информация</h3>
 
-    
+    <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+            <label class="form-label"><b>Бесплатный выезд на дом:</b></label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Да</option>
+                <option value="1">Нет</option>
+            </select>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+            <label class="form-label"><b>Бесплатная диагностика:</b></label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Да</option>
+                <option value="1">Нет</option>
+            </select>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+            <label class="form-label"><b>Гарантия на ремонт:</b></label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>1 год</option>
+                <option value="1">2 года</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-3 d-block mx-auto">
+        <button type="submit" class="btn btn-primary-registr mt-3">Зарегистрироваться</button>
+    </div>
 
     
     
