@@ -30,4 +30,12 @@ class RegistrationController extends Controller
         $post = $request->post();
         $avatar = $request->file();
     }
+
+    public function uploadAvatar()
+    {
+        return response()->json([
+            'name' => 'Abigail',
+            'state' => 'CA',
+        ]);
+    }
 }

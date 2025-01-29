@@ -51,6 +51,15 @@
 
         function uploadAvatar() {
             
+            let response = fetch('/api/avatar-upload', {
+                method: 'POST',
+                body: 123
+            })
+
+            let data = response.then(res => res.json())
+
+            data.then(res => console.log(res))
+
             console.log(URL.createObjectURL(input.files[0]))
             avatar_input.style.background = `url(${URL.createObjectURL(input.files[0])})`
             avatar_input.style.backgroundSize = "cover"
