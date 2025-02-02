@@ -12,7 +12,7 @@
             <div class="border p-4 rounded">
             
                 <div class="row">
-                    <div class="col-12 col-md-7 mx-auto">
+                    <div class="col-12 col-md-8 mx-auto">
                         <img src="https://sun9-4.userapi.com/6jUPwdybruk1ernfh0nhm1RCu2eSgHNMmDCCbg/rxQ8q3SOoDo.jpg" class="img-fluid avatar">
                     </div>
 
