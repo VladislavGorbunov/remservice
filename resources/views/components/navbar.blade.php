@@ -29,7 +29,7 @@
       </ul>
       <form class="d-flex justify-content-center" role="search">
         <a href="{{ route('login') }}" class="btn btn-navbar-outline mx-1" type="submit">Клиентам</a>
-        <a href="{{ route('for-the-masters') }}" class="btn btn-navbar mx-1" type="submit">Специалистам</a>
+        <a href="{{ route('for-the-masters') }}" class="btn btn-navbar mx-1" type="submit"><i class="bi bi-person-add"></i> Специалистам</a>
       </form>
     </div>
   </div>
