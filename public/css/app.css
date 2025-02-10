@@ -156,7 +156,7 @@ h1 {
     position: relative;
     width: 100%;
     min-height: 530px;
-    background: linear-gradient(45deg, rgb(243, 248, 255), rgb(227, 238, 253));
+    background: linear-gradient(45deg, rgb(243, 248, 255), rgb(222, 235, 253));
     background-size: cover;
     z-index: 1;
     overflow: hidden;
@@ -165,8 +165,8 @@ h1 {
 .header-banner-short {
     position: relative;
     width: 100%;
-    min-height: 220px;
-    background: rgba(243, 243, 255, 1);
+    min-height: 250px;
+    background: linear-gradient(45deg, rgb(243, 248, 255), rgb(222, 235, 253));
     background-size: cover;
     z-index: 1;
     overflow: hidden;
@@ -179,7 +179,7 @@ h1 {
     height: 100%;
     position: absolute;
     z-index: -2;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .stir-wash {

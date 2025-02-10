@@ -1,12 +1,12 @@
 <div class="col-12 col-md-4">
         <div class="mb-3">
             <label class="form-label"><b>Ваше имя:</b></label>
-            <input type="text" class="form-control" placeholder="">
+            <input type="text" class="form-control" placeholder="" name="name">
         </div>
 
         <div class="mb-3">
             <label class="form-label"><b>Фамилия:</b></label>
-            <input type="text" class="form-control" placeholder="">
+            <input type="text" class="form-control" placeholder="" name="lastname">
         </div>
 
         <div class="mb-3">
@@ -27,7 +27,7 @@
     <div class="col-12 col-md-5">
         <div class="mb-3">
             <label class="form-label"><b>Электронная почта:</b> (<small>На эту почту будут приходить заявки</small>)</label>
-            <input type="email" class="form-control" placeholder="">
+            <input type="email" class="form-control" placeholder="" name="email">
         </div>
 
         <div class="mb-3">
@@ -57,4 +57,9 @@
                 <option value="1">Высшее</option>
             </select>
         </div>
+    </div>
+
+    <div class="mb-3">
+            <label class="form-label"><b>Пароль:</b></label>
+            <input type="text" class="form-control" placeholder="" name="password">
     </div>

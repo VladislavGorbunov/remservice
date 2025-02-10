@@ -4,6 +4,12 @@
 @section('content')
     <x-headers-short :headerTitle="$headerTitle" :regionName="$regionName"/>
     <style>
+
+        dl, ol, ul {
+            margin-top: 1rem !important;
+            margin-bottom: 1rem;
+        }
+
         .avatar-input {
             width: 290px;
             height: 290px;
@@ -13,6 +19,17 @@
     </style>
 
     <div class="container">
+
+    @if ($errors->any())
+    <div class="alert alert-danger mt-3">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
         <h3 class="mt-4 mb-3 text-center">Личные данные</h3>
     
         <form action="" method="POST" enctype="multipart/form-data" class="form">
@@ -40,6 +57,7 @@
         input.setAttribute('type', 'file')
         input.setAttribute('name', 'avatar')
         input.setAttribute('value', '1231')
+        input.setAttribute('hidden', true)
         form.prepend(input)
         avatar_input.addEventListener("click", openInput)
 

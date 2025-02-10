@@ -16,6 +16,7 @@ class UserSeeder extends Seeder
     {
         //
         DB::table('users')->insert([
+            'avatar' => 'avatars/no-avatar.png',
             'name' => 'Владислав',
             'lastname' => 'Горбунов',
             'role' => 0,

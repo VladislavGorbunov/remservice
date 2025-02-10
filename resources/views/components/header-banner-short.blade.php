@@ -9,5 +9,7 @@
         <div class="stir-wash-top"></div>
         <div class="stir-wash"></div>
     </div>
+
+    <div class="header-layout"></div>
 </div>
 

@@ -33,7 +33,15 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, $request->get('remember'))) {
             $request->session()->regenerate();
             $user = Auth::user();
-            return redirect()->intended('profile');
+
+            if ($user->isAdmin) {
+                return redirect('admin');
+            } elseif ($user->isMaster) {
+                return redirect('master');
+            } else {
+                return redirect('profile');
+            }
+            
         } else {
             session()->flash('error', 'Неверный логин или пароль.');
             return redirect('login');
