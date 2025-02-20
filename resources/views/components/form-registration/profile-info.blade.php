@@ -48,15 +48,6 @@
             <option value="3">Более 20 лет</option>
         </select>
         </div>
-
-        <div class="mb-3">
-            <label class="form-label"><b>Образование:</b></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Среднее-специальное</option>
-                <option value="1">Среднее-профессиональное</option>
-                <option value="1">Высшее</option>
-            </select>
-        </div>
     </div>
 
     <div class="mb-3">

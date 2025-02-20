@@ -2,7 +2,6 @@
   <div class="container">
   <div class="">
     <span class="navbar-brand"><span style="color:#463ee4">ЗА</span>МАСТЕРОМ</span>
-    
   </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,8 +27,8 @@
         </li>
       </ul>
       <form class="d-flex justify-content-center" role="search">
-        <a href="{{ route('login') }}" class="btn btn-navbar-outline mx-1" type="submit">Клиентам</a>
-        <a href="{{ route('for-the-masters') }}" class="btn btn-navbar mx-1" type="submit"><i class="bi bi-person-add"></i> Специалистам</a>
+        <a href="{{ route('login') }}" class="btn btn-navbar-outline mx-1" type="submit">Личный кабинет</a>
+        <a href="{{ route('for-the-masters') }}" class="btn btn-navbar mx-1" type="submit"><i class="bi bi-person-add"></i> Мастерам</a>
       </form>
     </div>
   </div>

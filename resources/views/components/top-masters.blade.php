@@ -1,3 +1,4 @@
+<div class="container">
 <div class="mt-5 mb-5">
     <h2 class="text-center mt-4 mb-4">Топ-15 мастеров Москвы</h2>
     
@@ -9,7 +10,7 @@
                 <div class="badge-free-exit"><i class="bi bi-house-add-fill"></i> Выезд бесплатно</div>
                 <div class="badge-warranty"><i class="bi bi-shield-fill-check"></i> Даёт гарантию</div>
             </div>
-            <div class="border p-4 rounded">
+            <div class="shadow p-4 rounded">
             
                 <div class="row">
                     <div class="col-12 col-md-8 mx-auto">
@@ -17,13 +18,13 @@
                     </div>
 
                     <div class="col-12 col-md-12 mt-2">
-                        <p class="text-center fs-5 mb-1 mt-2"><strong>Иванов Виктор Петрович</strong></p>
+                        <p class="text-center fs-5 mb-2 mt-2"><strong>Иванов Виктор Петрович</strong></p>
                         <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>Направление:</b> Ремонт стиральных машин</li>
                         <li class="list-group-item"><b>Возраст:</b> 48 лет</li>
                         <li class="list-group-item"><b>Опыт ремонта:</b> 18 лет</li>
-                        <li class="list-group-item"><b>Предоставляет гарантию:</b> до 2-х лет</li>
-                        <li class="list-group-item"><b>Образование:</b> Среднее-специальное</li>
+                        <li class="list-group-item"><b>Гарантия:</b> до 2-х лет</li>
+                        <!-- <li class="list-group-item"><b>Образование:</b> Среднее-специальное</li> -->
                         </ul>
 
                         <a href="" class="btn btn-get-profile mx-auto mt-3">Перейти к профилю</a>
@@ -35,4 +36,5 @@
     @endfor
 
     </div>
+</div>
 </div>

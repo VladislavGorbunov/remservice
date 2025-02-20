@@ -16,10 +16,14 @@ return new class extends Migration
             $table->string('avatar');
             $table->string('name');
             $table->string('lastname');
+            $table->integer('city');
             $table->string('email')->unique();
+            $table->string('phone')->unique();
+            $table->integer('experience'); // Опыт работы
+            $table->integer('age');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('role');
+            // $table->integer('role');
             $table->rememberToken();
             $table->timestamps();
             $table->integer('isAdmin')->default(0);

@@ -4,11 +4,11 @@
 @section('content')
     <x-headers-short :headerTitle="$headerTitle" :regionName="$regionName"/>
     <style>
-
+/* 
         dl, ol, ul {
             margin-top: 1rem !important;
             margin-bottom: 1rem;
-        }
+        } */
 
         .avatar-input {
             width: 290px;

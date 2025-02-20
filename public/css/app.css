@@ -14,6 +14,16 @@ body {
     
 }
 
+.shadow {
+    box-shadow: 0 3px  20px -15px rgb(102, 107, 114) !important;
+}
+
+.list-group-item {
+    padding: 5px 0;
+    background: none;
+
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Rubik", serif;
     font-weight: 700 !important;
@@ -38,7 +48,7 @@ h1 {
 .navbar {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    padding: 20px 0;
+    padding: 23px 0;
     color: #111 !important;
 }
 
@@ -70,15 +80,9 @@ h1 {
     padding: 0px !important;
     margin: 0px !important;
     text-align: center;
+    margin-bottom: -10px;
 }
 
-.logo-bottom-text {
-    margin:0 auto;
-    padding: 0px !important;
-    font-size: 10px;
-    font-weight: 500;
-    text-align: center;
-}
 
 .bi-question-circle-fill {
     color:rgb(23, 170, 79);
@@ -146,10 +150,8 @@ h1 {
     color: rgb(19, 210, 93);
 }
 
-.bg-color {
-    background: rgba(243, 243, 255, 1);
-    padding: 30px 50px;
-    border-radius: 10px;
+.bg-color-block {
+    background: rgb(243, 248, 255);
 }
 
 .header-banner {
@@ -174,13 +176,15 @@ h1 {
 
 .header-layout {
     background: url("/images/pattern.png") center top;
-    background-size: contain;
+    background-size: 600px;
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: -2;
-    opacity: 0.4;
+    opacity: 0.6;
 }
+
+
 
 .stir-wash {
     display: block;
@@ -194,6 +198,7 @@ h1 {
     background-size: cover;
     transform: rotate(-11deg);
     transition: 1s;
+    
 }
 
 .stir-wash:hover {
@@ -221,54 +226,6 @@ h1 {
     transition: 1s;
 }
 
-
-.review-header {
-    display: block;
-    position: absolute;
-    width: 350px;
-    height: 90px;
-    padding: 13px 20px;
-    font-size: 11px;
-    bottom: 10px;
-    z-index: -1;
-    left: calc(50% - 165px);
-    background: #fff;
-    background-size: cover;
-    transform: rotate(0deg);
-    opacity: 0.6;
-    box-shadow: 0 2px 20px -17px #6a6a87;
-    border-radius: 10px;
-}
-
-.review-header:hover {
-    opacity: 0.9;
-}
-
-.review-header2 {
-    display: block;
-    position: absolute;
-    width: 350px;
-    height: 80px;
-    padding: 13px 20px;
-    font-size: 11px;
-    top: 130px;
-    z-index: -1;
-    right: 9%;
-    background: #fff;
-    background-size: cover;
-    transform: rotate(11deg);
-    opacity: 0.6;
-    box-shadow: 0 2px 20px -17px #6a6a87;
-    border-radius: 10px;
-}
-
-.review-header2:hover {
-    opacity: 0.9;
-}
-
-
-
-
 .btn-primary-registr {
     background: #463ee4;
     border: none;
@@ -284,16 +241,16 @@ h1 {
 }
 
 .btn-navbar {
-    background: #463ee4;
+    background: linear-gradient(45deg, #463ee4, #645cf9);
     border: none;
     border-radius: 10px;
-    padding: 12px 30px;
+    padding: 12px 23px;
     font-size: 14px;
     color: #fff;
 }
 
 .btn-navbar:hover {
-    background: #4f46f3;
+    background: linear-gradient(45deg, #4f46f3, #645cf9);
     border: none;
     color: #fff;
 }
@@ -307,7 +264,7 @@ h1 {
     border: none;
     background: none;
     border-radius: 10px;
-    padding: 12px 20px;
+    padding: 12px 15px;
     font-size: 14px;
     color: #000;
 }
