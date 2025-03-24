@@ -17,7 +17,7 @@ class PagesController extends Controller
 
         $data['regionName'] = null;
         $data['regionNameIn'] = null;
-        $data['title'] = 'Сайт';
+        $data['title'] = 'Частные мастера по ремонту бытовой техники в любом городе России';
 
         $data['categories'] = Category::get();
 
@@ -34,7 +34,7 @@ class PagesController extends Controller
 
         $data['regionName'] = $region->name;
         $data['regionNameIn'] = $region->name_in;
-        $data['title'] = 'Сайт';
+        $data['title'] = 'Частные мастера по ремонту бытовой техники ' . $region->name_in;
 
         $data['categories'] = Category::get();
 

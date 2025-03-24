@@ -1,6 +1,6 @@
 <div class="mt-5 mb-5 bg-color-block catalog-block pt-5 pb-5">
 <div class="container">
-<h2 class="text-center">Найдём мастера по ремонту любой техники</h2>
+<h2 class="text-center">Мастера по ремонту техники в вашем городе</h2>
 <p class="text-center">Выбирете технику которая нуждается в ремонте</p>
 <div class="row">
 
