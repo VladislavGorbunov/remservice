@@ -10,6 +10,10 @@
             background: none;
             border: none;
         }
+
+        .bi-fire {
+            color: rgb(251, 61, 23);
+        }
     </style>
 
     @foreach ($categories as $category) 
@@ -18,7 +22,7 @@
         <p class="fs-6 mb-1"><a href="{{ $category->slug }}" class="link-dark text-decoration-none"><strong>{{$category->name}}</strong></a></p>
         <ul class="list-group list-group-flush">
             @foreach ($category->subcategories as $subcat) 
-                <li class="list-group-item"><a href="{{url()->current()}}/{{ $subcat->slug }}" class="link-dark text-decoration-none">{{$subcat->name}}</a></li>
+                <li class="list-group-item"><a href="{{url()->current()}}/{{ $subcat->slug }}" class="link-dark text-decoration-none">{{$subcat->name}}</a> @if ($subcat->top) <i class="bi bi-fire"></i> @endif</li>
             @endforeach
             <li class="list-group-item"><a href="">Показать все</a></li>
         </ul>
