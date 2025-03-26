@@ -19,6 +19,10 @@ class AuthController extends Controller
             'error' => $request->session()->get('error') ? $request->session()->get('error') : ''
         ];
 
+        $user = Auth::user();
+
+        $this->redirect($user);
+
         return view('site.login', $data);
     }
 
@@ -37,7 +41,7 @@ class AuthController extends Controller
             if ($user->isAdmin) {
                 return redirect('admin');
             } elseif ($user->isMaster) {
-                return redirect('master');
+                return redirect('panel');
             } else {
                 return redirect('profile');
             }
@@ -45,6 +49,20 @@ class AuthController extends Controller
         } else {
             session()->flash('error', 'Неверный логин или пароль.');
             return redirect('login');
+        }
+    }
+
+
+    public function redirect($user) 
+    {
+        if ($user) {
+            if ($user->isAdmin) {
+                return redirect('admin');
+            } elseif ($user->isMaster) {
+                return redirect('panel');
+            } else {
+                return redirect('profile');
+            }
         }
     }
 

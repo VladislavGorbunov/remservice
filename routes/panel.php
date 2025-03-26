@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MasterPanel\MasterPanelController;
+use App\Http\Controllers\Panel\PanelController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth', 'master'])->group(function () {
-    Route::get('/panel', [MasterPanelController::class, 'index']);
+    Route::get('/panel', [PanelController::class, 'index']);
 });

@@ -47,16 +47,16 @@ class RegistrationController extends Controller
             'phone' => ['required'],
             'region_id' => ['required'],
         ]);
-        
+    
+
         User::create([
-            // "avatar" => $upload_file_path,
-            "name" => $post['name'],
-            "lastname" => $post['lastname'],
-            "email" => $post['email'],
-            "password" => $post['password'],
-            "phone" => $post['phone'],
-            "region_id" => $post['region_id'],
-            "role" => '0',
+            "avatar" => $upload_file_path,
+            "name" => $request->name,
+            "lastname" => $request->lastname,
+            "email" => $request->email,
+            "password" => $request->password,
+            "phone" => $request->phone,
+            "region_id" => $request->region_id,
             "isMaster" => 1, 
         ]);
 

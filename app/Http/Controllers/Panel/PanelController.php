@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\MasterPanel;
+namespace App\Http\Controllers\Panel;
 
 use Illuminate\View\View;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class MasterPanelController extends Controller
+class PanelController extends Controller
 {
     public function index(): View
     {

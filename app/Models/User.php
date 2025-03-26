@@ -22,9 +22,14 @@ class User extends Authenticatable
         'avatar',
         'name',
         'lastname',
-        'role',
+        'phone',
+        'region_id',
+        'experience',
         'email',
         'password',
+        'isMaster',
+        'isClient',
+        'isAdmin',
     ];
 
     /**
