@@ -19,33 +19,37 @@
     </style>
 
     <div class="container">
+        <div class="col-12 col-md-8 mx-auto">
+        
+        @if ($errors->any())
+        <div class="alert alert-danger mt-3">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
-    @if ($errors->any())
-    <div class="alert alert-danger mt-3">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
-        <h3 class="mt-4 mb-3 text-center">Личные данные</h3>
+        <!-- <h3 class="mt-5 mb-4 text-center">Личные данные</h3> -->
     
-        <form action="" method="POST" enctype="multipart/form-data" class="form">
-            @csrf
+        <form action="" method="POST" enctype="multipart/form-data" class="form mt-5">
+        @csrf
         <div class="row">
-            <x-form-registration.input-avatar/>
-            <x-form-registration.profile-info/>
-            <x-form-registration.categories :categories="$categories"/>
-            <x-form-registration.dop-info/>
+            <!-- <x-form-registration.input-avatar/> -->
+            <x-form-registration.profile-info :regions="$regions"/>
+            <!-- <x-form-registration.categories :categories="$categories"/> -->
+            <!-- <x-form-registration.dop-info/> -->
     
-            <div class="col-3 d-block mx-auto">
-                <button type="submit" class="btn btn-primary-registr mt-3">Зарегистрироваться</button>
-            </div>
+            
         </div>
 
+        <div class="col-3 d-block mx-auto">
+                <button type="submit" class="btn btn-primary-registr mt-3">Зарегистрироваться</button>
+            </div>
+
         </form>
+    </div>
     </div>
 
 

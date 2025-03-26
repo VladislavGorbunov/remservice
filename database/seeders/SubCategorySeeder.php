@@ -19,14 +19,16 @@ class SubCategorySeeder extends Seeder
             'name' => 'Стиральные машины',
             'description' => 'Мастера по ремонту стиральных машин на дому',
             'slug' => 'remont-stiralnyh-mashin',
-            'category_id' => 1
+            'category_id' => 1,
+            'top' => 1,
         ]);
 
         DB::table('subcategories')->insert([
             'name' => 'Посудомоечные машины',
             'description' => 'Мастера по ремонту посудомоечных машин на дому',
             'slug' => 'remont-posudomoechnyh-mashin',
-            'category_id' => 1
+            'category_id' => 1,
+            'top' => 1,
         ]);
 
         DB::table('subcategories')->insert([
@@ -40,7 +42,8 @@ class SubCategorySeeder extends Seeder
             'name' => 'Холодильники',
             'description' => 'Мастера по ремонту холодильников на дому',
             'slug' => 'remont-holodilnikov',
-            'category_id' => 1
+            'category_id' => 1,
+            'top' => 1,
         ]);
 
         DB::table('subcategories')->insert([
@@ -119,7 +122,8 @@ class SubCategorySeeder extends Seeder
             'name' => 'Кофемашины',
             'description' => 'Мастера по ремонту кофемашин на дому',
             'slug' => 'remont-kofemashin',
-            'category_id' => 3
+            'category_id' => 3,
+            'top' => 1,
         ]);
 
         DB::table('subcategories')->insert([

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Region;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,6 +19,7 @@ class RegistrationController extends Controller
         $data['headerTitle'] = 'Регистрация мастера';
 
         $data['categories'] = Category::get();
+        $data['regions'] = Region::get();
 
         return view('site.master-registration', $data);
     }
@@ -29,8 +31,7 @@ class RegistrationController extends Controller
 
     public function insertMaster(Request $request) 
     {
-        $post = $request->post();
-       
+        
         if ($request->file('avatar')) {
             // Загрузка файла в папку storage/app/avatars
             $upload_file_path = $request->file('avatar')->store('avatars');
@@ -43,16 +44,20 @@ class RegistrationController extends Controller
             'password' => ['required'],
             'name' => ['required'],
             'lastname' => ['required'],
+            'phone' => ['required'],
+            'region_id' => ['required'],
         ]);
         
         User::create([
-            "avatar" => $upload_file_path,
+            // "avatar" => $upload_file_path,
             "name" => $post['name'],
             "lastname" => $post['lastname'],
             "email" => $post['email'],
             "password" => $post['password'],
+            "phone" => $post['phone'],
+            "region_id" => $post['region_id'],
             "role" => '0',
-            "isMaster" => 1,    
+            "isMaster" => 1, 
         ]);
 
         // $storage_path = str_replace('\\', '/', storage_path('app'));
@@ -64,9 +69,6 @@ class RegistrationController extends Controller
             $request->session()->regenerate();
             $user = Auth::user();
             return redirect()->intended('profile');
-        } else {
-            session()->flash('error', 'Неверный логин или пароль.');
-            return redirect('login');
         }
     }
 

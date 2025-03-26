@@ -4,7 +4,7 @@
     <div class="col-12 col-md-4 mb-3">
         <label class="form-label"><b>Бесплатный выезд на дом:</b></label>
         <select class="form-select" name="viezd">
-            <option selected>Да</option>
+            <option value="0" selected>Да</option>
             <option value="1">Нет</option>
         </select>
     </div>
@@ -12,7 +12,7 @@
     <div class="col-12 col-md-4 mb-3">
         <label class="form-label"><b>Бесплатная диагностика:</b></label>
         <select class="form-select" name="diagnostic">
-            <option selected>Да</option>
+            <option value="0" selected>Да</option>
             <option value="1">Нет</option>
         </select>
     </div>
@@ -20,8 +20,11 @@
     <div class="col-12 col-md-4 mb-3">
         <label class="form-label"><b>Гарантия на ремонт:</b></label>
         <select class="form-select" name="varanty">
-            <option selected>1 год</option>
-            <option value="1">2 года</option>
+            <option value="1" selected>1 год</option>
+            <option value="2">2 года</option>
+            <option value="3">3 года</option>
+            <option value="4">4 года</option>
+            <option value="5">5 лет</option>
         </select>
     </div>
 </div>

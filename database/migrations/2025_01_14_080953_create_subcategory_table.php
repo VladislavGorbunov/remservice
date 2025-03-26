@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('teg_title')->nullable();
             $table->string('teg_description')->nullable();
             $table->string('teg_keywords')->nullable();
+            $table->integer('top')->nullable();
             $table->timestamps();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')

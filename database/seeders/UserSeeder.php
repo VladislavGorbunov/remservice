@@ -19,9 +19,11 @@ class UserSeeder extends Seeder
             'avatar' => 'avatars/no-avatar.png',
             'name' => 'Владислав',
             'lastname' => 'Горбунов',
-            'role' => 0,
             'email' => 'limitorg2016@yandex.ru',
             'password' => Hash::make('Vadya2011!'),
+            'region_id' => 1,
+            'phone' => '+79119204952',
+            'experience' => 0,
             'isAdmin' => 1
         ]);
     }

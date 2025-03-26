@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('avatar');
             $table->string('name');
             $table->string('lastname');
-            $table->integer('city');
+            $table->integer('region_id');
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->integer('experience'); // Опыт работы
-            $table->integer('age');
+            // $table->integer('age');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             // $table->integer('role');
@@ -29,6 +29,10 @@ return new class extends Migration
             $table->integer('isAdmin')->default(0);
             $table->integer('isMaster')->default(0);
             $table->integer('isClient')->default(0);
+        });
+
+        Schema::table('users', function(Blueprint $table) {
+
         });
     }
 

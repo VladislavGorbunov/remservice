@@ -7,7 +7,7 @@
             @foreach ($category->subcategories as $subcat) 
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="" name="categories[]" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="{{$subcat->id}}" name="categories[]" id="flexCheckDefault">
                             {{$subcat->name}}
                     </label>
                 </div>   
