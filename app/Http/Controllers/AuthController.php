@@ -15,13 +15,21 @@ class AuthController extends Controller
     {
 
         $data = [
-            'form_text' => 'Найдите сотрудников прямо сегодня!',
             'error' => $request->session()->get('error') ? $request->session()->get('error') : ''
         ];
 
         $user = Auth::user();
 
-        $this->redirect($user);
+        // Редирект полтзователя если он уже авторизован
+        if ($user) {
+            if ($user->isAdmin) {
+                return redirect('/admin');
+            } elseif ($user->isMaster) {
+                return redirect('panel');
+            } else {
+                return redirect('profile');
+            }
+        }
 
         return view('site.login', $data);
     }
@@ -49,20 +57,6 @@ class AuthController extends Controller
         } else {
             session()->flash('error', 'Неверный логин или пароль.');
             return redirect('login');
-        }
-    }
-
-
-    public function redirect($user) 
-    {
-        if ($user) {
-            if ($user->isAdmin) {
-                return redirect('admin');
-            } elseif ($user->isMaster) {
-                return redirect('panel');
-            } else {
-                return redirect('profile');
-            }
         }
     }
 
