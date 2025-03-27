@@ -16,7 +16,6 @@
 </style>
 
     <div class="row">
-
         <div class="col-12 col-md-3">
             <div class="alert-phone p-3">
             @if (!$user->phone_verify)
