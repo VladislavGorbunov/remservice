@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Panel\PanelController;
 use App\Http\Controllers\Panel\MasterController;
-
+use App\Http\Controllers\Panel\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +20,6 @@ Route::middleware(['auth', 'master'])->group(function () {
     Route::get('/panel', [PanelController::class, 'index'])->name('panel-index');
     Route::get('/panel/about-me', [MasterController::class, 'profileInfo'])->name('master-info');
     Route::post('/panel/about-me', [MasterController::class, 'profileInfo'])->name('master-info');
-    Route::get('/panel/add-technic', [PanelController::class, 'addTechnic'])->name('add-technic');
-    Route::post('/panel/add-technic', [PanelController::class, 'addTechnic'])->name('add-technic');
+    Route::get('/panel/category', [CategoryController::class, 'addCategory'])->name('category');
+    Route::post('/panel/category', [CategoryController::class, 'addCategory'])->name('category');
 });

@@ -12,7 +12,6 @@
   <body>
 
   @yield('content')
-
   
   <script src="{{ asset('bootstrap-5.0.2-dist/js/bootstrap.min.js') }}"></script>
 </body>

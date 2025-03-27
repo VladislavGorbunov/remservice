@@ -8,8 +8,9 @@
             <div class="col-12 col-md-3 mt-4">
                 <x-panel.sidebar/>
             </div>
+
             <div class="col-12 col-md-9 mt-4">
-                <x-panel.categories :categories="$categories"/>
+                <x-panel.categories :categories="$categories" :userCategories="$user_categories"/>
             </div>
         </div>
     </div>

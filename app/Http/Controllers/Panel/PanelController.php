@@ -11,24 +11,13 @@ use App\Models\Category;
 
 class PanelController extends Controller
 {
-    public function index(): View
+    public function index(Request $request): View
     {
+        $data['message'] = $request->session()->get('message');
         $data['user'] = Auth::user();
         return view('panel.index', $data);
     }
 
-    public function addTechnic(Request $request)
-    {
-        $data['user'] = Auth::user();
-        $data['categories'] = Category::get();
 
-
-        if ($request->method() == 'POST') {
-            var_dump($request->categories);
-            session()->flash('message', 'Данные обновлены');
-        }
-
-        return view('panel.addTechnic', $data);
-    }
 
 }
