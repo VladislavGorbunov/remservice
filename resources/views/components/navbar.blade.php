@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand-lg fixed-top">
+<nav class="navbar navbar-light navbar-expand-lg">
   <div class="container">
   <div class="">
     <span class="navbar-brand"><span style="color:#463ee4">ЗА</span>МАСТЕРОМ</span>

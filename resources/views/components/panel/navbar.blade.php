@@ -11,7 +11,7 @@
     
       <ul class="navbar-nav me-auto text-center py-5 py-md-0">
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
-          <a class="nav-link" href="/">Главная</a>
+          <a class="nav-link" href="/panel">Главная</a>
         </li>
         <li class="nav-item mt-1 mb-1 mb-lg-0 mt-lg-0 ">
           <a class="nav-link" href="/about">О проекте</a>

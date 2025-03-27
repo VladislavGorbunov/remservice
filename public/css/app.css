@@ -158,12 +158,12 @@ h1 {
 .header-banner {
     position: relative;
     width: 100%;
-    min-height: 600px;
+    min-height: 520px;
     background: linear-gradient(45deg, rgb(243, 248, 255), rgb(222, 235, 253));
     background-size: cover;
     z-index: 1;
     overflow: hidden;
-    padding-top: 80px !important;
+    padding-top: 0px !important;
 }
 
 .header-banner-short {
@@ -174,7 +174,7 @@ h1 {
     background-size: cover;
     z-index: 1;
     overflow: hidden;
-    padding-top: 80px !important;
+    padding-top: 0px !important;
 }
 
 .header-layout {
@@ -186,6 +186,7 @@ h1 {
     z-index: -2;
     opacity: 0.5;
 }
+
 
 .gradient-text {
     color: #222; 
@@ -201,25 +202,13 @@ h1 {
     position: absolute;
     width: 350px;
     height: 350px;
-    bottom: -210px;
+    bottom: -230px;
     z-index: -1;
     left: 10%;
     background: url("/images/header-wash.png") top center;
     background-size: cover;
     transform: rotate(-11deg);
     transition: 1s;
-    animation: animation-bottom;
-    animation-duration: 1.5s;
-}
-
-@keyframes animation-bottom {
-    0% {
-        bottom: -300px;
-    } 50% {
-        bottom: -160px;
-    } 100% {
-        bottom: -210px;
-    }
 }
 
 .stir-wash:hover {
@@ -227,37 +216,25 @@ h1 {
     transition: 1s;
 }
 
-
 .stir-wash-top {
     display: block;
     position: absolute;
     width: 350px;
     height: 300px;
-    top: -120px;
+    top: -230px;
     z-index: -1;
     right: 10%;
     background: url("/images/header-wash.png") bottom center;
     background-size: cover;
     transform: rotate(11deg);
     transition: 1s;
-    animation: animation-top;
-    animation-duration: 3s;
 }
 
 .stir-wash-top:hover {
-    top: -90px;
+    top: -190px;
     transition: 1s;
 }
 
-@keyframes animation-top {
-    0% {
-        top: -300px;
-    } 50% {
-        top: -90px;
-    } 100% {
-        top: -120px;
-    }
-}
 
 .btn-primary-registr {
     background: #463ee4;

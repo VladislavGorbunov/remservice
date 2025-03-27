@@ -16,8 +16,8 @@
 </style>
     <p>Чтобы профиль был активен и виден на нашем сайте, выполните условия ниже:</p>
     <div class="row">
-        <div class="col-12 col-md-4 mb-2">
-        <div class="col-12 col-md-3">
+        
+        <div class="col-12 col-md-4">
             <div class="alert-phone p-3">
             @if (!$user->phone_verify)
                 Подтвердите номер телефона: {{ $user->phone }} <hr> 
@@ -33,9 +33,12 @@
 
         <div class="col-12 col-md-4 mb-2">
             <div class="alert-phone p-3">
-            @if (!$user->phone_verify)
-                Расскажите будущим клиентам о себе и о вашем опыте в ремонте техники. <hr> <a href="">Рассказать</a>
-            @endif
+                Расскажите будущим клиентам о себе и о вашем опыте в ремонте техники. <hr> 
+                @if (!$user->aboutme || !$user->experience)
+                    <a href="{{ route('master-info') }}">Рассказать</a>
+                @else
+                    <span class="text-success"><i class="bi bi-check2-all"></i> Отлично! Данные заполнены</span>
+                @endif
             </div>
         </div>
 
@@ -46,4 +49,4 @@
             @endif
             </div>
         </div>
-        </div>
+        

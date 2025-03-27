@@ -19,6 +19,8 @@ return new class extends Migration
             $table->integer('region_id');
             $table->string('email')->unique();
             $table->string('phone')->unique();
+            $table->integer('phone_verify')->default(0);
+            $table->text('aboutme')->nullable();
             $table->integer('experience')->nullable(); // Опыт работы
             // $table->integer('age');
             $table->timestamp('email_verified_at')->nullable();
