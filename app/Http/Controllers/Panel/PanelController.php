@@ -7,6 +7,7 @@ use Illuminate\View\View;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Category;
 
 class PanelController extends Controller
 {
@@ -16,9 +17,18 @@ class PanelController extends Controller
         return view('panel.index', $data);
     }
 
-    public function addTechnic()
+    public function addTechnic(Request $request)
     {
-        echo 'Страница добавления ремонт. техники';
+        $data['user'] = Auth::user();
+        $data['categories'] = Category::get();
+
+
+        if ($request->method() == 'POST') {
+            var_dump($request->categories);
+            session()->flash('message', 'Данные обновлены');
+        }
+
+        return view('panel.addTechnic', $data);
     }
 
 }

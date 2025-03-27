@@ -18,11 +18,16 @@ class MasterController extends Controller
 
         $user = User::find(Auth::user()->id);
 
+        if (Auth::user()->phone != $request->phone) {
+            $phone_verify = false;
+        }
+
         if ($request->method() == 'POST') {
             $user->name = $request->name;
             $user->lastname = $request->lastname;
             $user->email = $request->email;
             $user->phone = $request->phone;
+            $user->phone_verify = $phone_verify;
             $user->experience = $request->experience;
             $user->region_id = $request->region_id;
             $user->aboutme = $request->aboutme;

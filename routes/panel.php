@@ -21,4 +21,5 @@ Route::middleware(['auth', 'master'])->group(function () {
     Route::get('/panel/about-me', [MasterController::class, 'profileInfo'])->name('master-info');
     Route::post('/panel/about-me', [MasterController::class, 'profileInfo'])->name('master-info');
     Route::get('/panel/add-technic', [PanelController::class, 'addTechnic'])->name('add-technic');
+    Route::post('/panel/add-technic', [PanelController::class, 'addTechnic'])->name('add-technic');
 });
