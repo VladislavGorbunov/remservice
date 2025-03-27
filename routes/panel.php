@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth', 'master'])->group(function () {
-    Route::get('/panel', [PanelController::class, 'index']);
+    Route::get('/panel', [PanelController::class, 'index'])->name('panel-index');
+    Route::get('/panel/add-technic', [PanelController::class, 'addTechnic'])->name('add-technic');
 });

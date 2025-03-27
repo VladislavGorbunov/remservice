@@ -16,4 +16,9 @@ class PanelController extends Controller
         return view('panel.index', $data);
     }
 
+    public function addTechnic()
+    {
+        echo 'Страница добавления ремонт. техники';
+    }
+
 }
