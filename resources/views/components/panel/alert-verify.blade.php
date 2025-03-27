@@ -42,7 +42,12 @@
 
         <div class="col-12 col-md-4 mb-2">
             <div class="alert p-3">
-                Добавьте перечень техники, ремонт которой вы осуществляете. <hr> <a href="{{ route('category') }}">Добавить</a>
+                Добавьте перечень техники, ремонт которой вы осуществляете. <hr> 
+                @if ($categoriesSelectCount == 0)
+                    <a href="{{ route('category') }}">Добавить</a>
+                @else
+                    <span class="text-success"><i class="bi bi-check2-all"></i> Перечень техники заполнен!</span>
+                @endif
             </div>
         </div>
         

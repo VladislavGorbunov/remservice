@@ -36,12 +36,7 @@
         <form action="" method="POST" enctype="multipart/form-data" class="form mt-5">
         @csrf
         <div class="row">
-            <!-- <x-form-registration.input-avatar/> -->
             <x-form-registration.profile-info :regions="$regions"/>
-            <!-- <x-form-registration.categories :categories="$categories"/> -->
-            <!-- <x-form-registration.dop-info/> -->
-    
-            
         </div>
 
         <div class="col-3 d-block mx-auto">

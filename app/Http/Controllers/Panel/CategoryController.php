@@ -33,17 +33,29 @@ class CategoryController extends Controller
         
 
         if ($request->method() == 'POST') {
-            foreach ($request->categories as $category) {
-                UserCategory::create([
-                    'subcategory_id' => $category,
-                    'user_id' => Auth::user()->id,
-                ]);
-            }
+            // Удаление всех категорий перед записью новых
+            UserCategory::where('user_id', Auth::user()->id)->delete();
+
+            self::insertCategory($request->categories);
+            
 
             $request->session()->flash('message', 'Данные обновлены');
             return redirect('/panel');
         }
 
         return view('panel.category', $data);
+    }
+
+
+    public static function insertCategory($categories): void
+    {
+        if (!empty($categories)) {
+            foreach ($categories as $category) {
+                UserCategory::create([
+                    'subcategory_id' => $category,
+                    'user_id' => Auth::user()->id,
+                ]);
+            }
+        }
     }
 }

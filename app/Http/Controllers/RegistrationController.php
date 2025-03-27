@@ -68,7 +68,7 @@ class RegistrationController extends Controller
         if (Auth::attempt($credentials, true)) {
             $request->session()->regenerate();
             $user = Auth::user();
-            return redirect()->intended('panel');
+            return redirect('/panel');
         }
     }
 

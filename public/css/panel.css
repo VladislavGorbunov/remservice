@@ -15,3 +15,7 @@ a {
 .list-group-item a{
     color: #000;
 }
+
+.alert {
+    color: rgb(72, 74, 81);
+}

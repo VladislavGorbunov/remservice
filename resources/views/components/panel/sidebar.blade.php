@@ -3,5 +3,6 @@
   <li class="list-group-item"><a href="/panel/about-me">Личные данные</a></li>
   <li class="list-group-item"><a href="/panel/category">Категории услуг</a></li>
   <li class="list-group-item"><a href="/admin/regions">Заявки на ремонт</a></li>
+  <li class="list-group-item"><a href="/panel/questions">Вопросы клиентов</a></li>
   <li class="list-group-item"><a href="/admin/regions">Продвижение</a></li>
 </ul>
