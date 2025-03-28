@@ -57,7 +57,7 @@ class User extends Authenticatable
 
 
     
-    public function subCategory(): BelongsToMany
+    public function subcategory(): BelongsToMany
     {
         return $this->belongsToMany(SubCategory::class, 'users_subcategories', 'user_id', 'subcategory_id');
     }

@@ -54,20 +54,37 @@ class PagesController extends Controller
         $subcategory = SubCategory::where('slug', $subcategory)->first();
         if (!$subcategory) abort(404);
 
-        $masters = User::select('users.name as user_name', 'users.lastname as user_lastname', 'users.aboutme as user_aboutme', 'users.phone as user_phone', 'regions.name as region_name')
+
+
+        $masters = User::select('users.*', 'regions.name as region_name')
             ->join('regions', 'regions.id', '=', 'users.region_id')
+            ->join('users_subcategories', 'users_subcategories.subcategory_id', '=', 'users.id')
+            ->join('subcategories', 'subcategories.id', '=', 'users_subcategories.subcategory_id')
             ->where('isMaster', true)
+            ->where('subcategories.id', $subcategory->id)
             ->where('region_id', $region->id)
             ->get();
 
-        $data['masters'] = $masters;
+
+        foreach ($masters as $master) {
+            $masters_array[] = [
+                'name' => $master->name,
+                'lastname' => $master->lastname,
+                'phone' => $master->phone,
+                'experience' => $master->experience,
+                'aboutme' => $master->aboutme,
+                'region' => $master->region_name,
+                'categories' => User::find($master->id)->subcategory, // Категории ремонт. техники
+            ];
+        }
+
+        $data['masters'] = $masters_array;
 
         $data['title'] = 'Частные мастера по ремонту ' . mb_strtolower($subcategory->plural_name) . ' ' . $region->name_in .', рейтинг, отзывы, цены';
         $data['header_text'] = 'Частные мастера по ремонту ' . mb_strtolower($subcategory->plural_name) . ' ' . $region->name_in;
         $data['regionName'] = $region->name;
         $data['regionNameIn'] = $region->name_in;
         $data['categories'] = Category::get();
-
 
         return view('site.subcategory', $data);
     }

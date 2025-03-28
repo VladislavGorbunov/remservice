@@ -1,31 +1,41 @@
 <div class="container">
-    <h2 class="text-center mt-4 mb-4">Частные мастера в вашем городе</h2>
+    <h2 class="text-center mt-5 mb-4">Частные мастера в вашем городе</h2>
 
     @foreach ($masters as $master) 
-        <div class="col-12 border rounded p-3 mt-4">
+        <div class="col-12 master-block border rounded p-4 mt-4 mb-4">
             <div class="row">
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 p-2">
                     <img src="https://sun9-4.userapi.com/6jUPwdybruk1ernfh0nhm1RCu2eSgHNMmDCCbg/rxQ8q3SOoDo.jpg" class="img-fluid rounded">
                 </div>
 
-                <div class="col-12 col-md-6">
-                    <h4>{{ $master->user_name }} {{ $master->user_lastname }}</h4>
-                    <span class="d-block mt-2 mb-2">Рейтинг: <b>4.9 (143 отзыва)</b></span>
-                    <span class="d-block mt-2 mb-2">Город: <b>{{ $master->region_name }}</b></span>
-                    <span class="d-block mt-2 mb-2">Опыт ремонта: <b>более 10 лет</b></span>
+                <div class="col-12 col-md-6 px-3">
+                    <span class="master-name">{{ $master['name'] }} {{ $master['lastname'] }}</span>
+                    <span class="d-block mt-2 mb-2">Город: <b>{{ $master['region'] }}</b></span>
+                    <span class="d-block mt-2 mb-2">Опыт ремонта: <b>{{ $master['experience'] ? $master['experience'] : '-'}}</b> лет</span>
         
-                    <span class="d-block mt-2 mb-2">{{ $master->user_aboutme }}</span>
+                    <span class="d-block mt-2 mb-2">{{ $master['aboutme'] }}</span>
                     
                     
-                    {{ $master->user_phone }}
-                </div>
+                    <!-- {{ $master['phone'] }} -->
+                    <div class="mb-3">
+                    <p class="mb-0 mt-2"><b>Ремонтирую:</b></p>
+                    @foreach ($master['categories'] as $category) 
+                        <span class="master-category-blocks">
+                            <a href="{{ $category['slug'] }}">{{ $category['name'] }}</a>
+                        </span>
+                    @endforeach
+                    </div>
 
-                <div class="col-12 col-md-3">
-                    <p class="mt-1"><b>Выезд:</b> Бесплатно</p>
-                    <p class="mt-1"><b>Диагностика:</b> Бесплатно*</p>
-                    <p class="mt-1"><b>Гарантия:</b> 1 год</p>
-                    <button class="btn phone-button w-100 mt-2"><i class="bi bi-telephone-fill"></i> Телефон</button>
+                </div>
                     
+                <div class="col-12 col-md-3 px-3">
+                    <p>Рейтинг мастера: <b>4.9</b> из 5</p>
+                    <p>Отзывов клиентов: <b>74</b></p>
+                    <p class="">Выезд мастера: <b>Бесплатно</b></p>
+                    <p class="">Диагностика: <b>Бесплатно*</b></p>
+                    <p class="">Гарантия на ремонт: <b>1 год</b></p>
+                    <button class="btn phone-button w-100 mt-1"><i class="bi bi-telephone"></i> Показать телефон</button>
+                    <a href="" class="btn more-detailed-button w-100 mt-3"><i class="bi bi-eye"></i> Подробнее о мастере</a>
                 </div>
                 
             </div>

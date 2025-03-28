@@ -158,7 +158,7 @@ h1 {
 .header-banner {
     position: relative;
     width: 100%;
-    min-height: 520px;
+    min-height: 500px;
     background: linear-gradient(45deg, rgb(243, 248, 255), rgb(222, 235, 253));
     background-size: cover;
     z-index: 1;
@@ -449,10 +449,66 @@ h1, h2 {
 }
 
 .phone-button {
-    border: 1px solid rgb(33, 125, 223);
-    color: rgb(33, 125, 223);
-    padding: 10px;
-    border-radius: 10px;
+    background: #463ee4;
+    color: #fff;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.phone-button:hover {
+    background: #5249f5;
+    color: #fff;
+}
+
+.phone-button .bi-telephone {
+    margin-right: 8px;
+}
+
+.more-detailed-button {
+    background: #e3ebf8;
+    color: #435ab6;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.more-detailed-button:hover {
+    background: #e1eaf8;
+    color: #435ab6;
+}
+
+.more-detailed-button .bi-eye {
+    margin-right: 8px;
+}
+
+.master-block {
+    border-radius: 10px !important;
+    border: 1px solid #e9f3f7 !important;
+    box-shadow: 0 1px 15px -10px rgba(17, 17, 17, 0.4);
+}
+
+.master-category-blocks {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #ecf2f7;
+    color: #505252;
+    margin-right: 5px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.master-category-blocks a {
+    text-decoration: none;
+    color: #286ccb;
+}
+
+.master-name {
+    font-size: 21px;
+    font-weight: 600;
 }
 
 .footer-bg {
