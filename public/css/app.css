@@ -190,7 +190,7 @@ h1 {
 
 .gradient-text {
     color: #222; 
-    background-image: linear-gradient(40deg, #111 25%, #463ee4 45%); 
+    background-image: linear-gradient(40deg, #384bab 25%, #286ccb 45%); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 

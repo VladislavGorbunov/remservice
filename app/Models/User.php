@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable
 {
@@ -55,21 +56,9 @@ class User extends Authenticatable
     ];
 
 
-    // public static function isAdmin()
-    // {
-    //     if (Auth::user()->admin) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
-
-    // public static function isMaster()
-    // {
-    //     if (Auth::user()->master) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
+    
+    public function subCategory(): BelongsToMany
+    {
+        return $this->belongsToMany(SubCategory::class, 'users_subcategories', 'user_id', 'subcategory_id');
+    }
 }

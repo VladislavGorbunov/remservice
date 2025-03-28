@@ -46,5 +46,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/{region}', [PagesController::class, 'regionsPage']);
+Route::get('/{region}/{subcategory}', [PagesController::class, 'subcategoryPage']);
 
 

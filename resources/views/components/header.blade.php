@@ -10,5 +10,5 @@
     </head>
   <body>
   <x-navbar/>
-  <x-header-banner/>
+  <x-header-banner :header_text="$header_text"/>
   

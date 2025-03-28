@@ -17,6 +17,7 @@ class SubCategorySeeder extends Seeder
         //Крупная бытовая техника
         DB::table('subcategories')->insert([
             'name' => 'Стиральные машины',
+            'plural_name' => 'Стиральных машин',
             'description' => 'Мастера по ремонту стиральных машин на дому',
             'slug' => 'remont-stiralnyh-mashin',
             'category_id' => 1,
@@ -25,6 +26,7 @@ class SubCategorySeeder extends Seeder
 
         DB::table('subcategories')->insert([
             'name' => 'Посудомоечные машины',
+            'plural_name' => 'Посудомоечных машин',
             'description' => 'Мастера по ремонту посудомоечных машин на дому',
             'slug' => 'remont-posudomoechnyh-mashin',
             'category_id' => 1,
@@ -33,6 +35,7 @@ class SubCategorySeeder extends Seeder
 
         DB::table('subcategories')->insert([
             'name' => 'Сушильные машины',
+            'plural_name' => 'Сушильных машин',
             'description' => 'Мастера по ремонту сушильных машин на дому',
             'slug' => 'remont-sushilnyh-mashin',
             'category_id' => 1
@@ -40,6 +43,7 @@ class SubCategorySeeder extends Seeder
 
         DB::table('subcategories')->insert([
             'name' => 'Холодильники',
+            'plural_name' => 'Холодильников',
             'description' => 'Мастера по ремонту холодильников на дому',
             'slug' => 'remont-holodilnikov',
             'category_id' => 1,
@@ -48,6 +52,7 @@ class SubCategorySeeder extends Seeder
 
         DB::table('subcategories')->insert([
             'name' => 'Электроплиты',
+            'plural_name' => 'Электроплит',
             'description' => 'Мастера по ремонту электроплит на дому',
             'slug' => 'remont-elektroplit',
             'category_id' => 1
@@ -55,6 +60,7 @@ class SubCategorySeeder extends Seeder
 
         DB::table('subcategories')->insert([
             'name' => 'Варочные панели',
+            'plural_name' => 'Варочных панелей',
             'description' => 'Мастера по ремонту варочных панелей на дому',
             'slug' => 'remont-varochnyh-paneley',
             'category_id' => 1
@@ -62,6 +68,7 @@ class SubCategorySeeder extends Seeder
 
         DB::table('subcategories')->insert([
             'name' => 'Духовые шкафы',
+            'plural_name' => 'Духовых шкафов',
             'description' => 'Мастера по ремонту духовых шкафов на дому',
             'slug' => 'remont-duhovyh-shkafov',
             'category_id' => 1
@@ -70,6 +77,7 @@ class SubCategorySeeder extends Seeder
         // Мелкая бытовая техника
         DB::table('subcategories')->insert([
             'name' => 'Роботы-пылесосы',
+            'plural_name' => 'Роботов пылесосов',
             'description' => 'Мастера по ремонту роботов-пылесосов на дому',
             'slug' => 'remont-robotov-pylesosov',
             'category_id' => 2

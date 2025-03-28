@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\SubCategory;
 use App\Models\UserCategory;
 
 class PanelController extends Controller
@@ -16,6 +17,7 @@ class PanelController extends Controller
     {
         $data['message'] = $request->session()->get('message');
         $data['user'] = Auth::user();
+        
         $categories_select = UserCategory::where('user_id', Auth::user()->id)->get();
         $data['categories_select_count'] = count($categories_select);
         
