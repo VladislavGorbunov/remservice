@@ -448,6 +448,13 @@ h1, h2 {
     border-radius: 0px 0 15px 0;
 }
 
+.phone-button {
+    border: 1px solid rgb(33, 125, 223);
+    color: rgb(33, 125, 223);
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .footer-bg {
     background-color: rgb(243, 248, 255);
     bottom: 0;

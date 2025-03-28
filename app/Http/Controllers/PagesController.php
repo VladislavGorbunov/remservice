@@ -54,7 +54,7 @@ class PagesController extends Controller
         $subcategory = SubCategory::where('slug', $subcategory)->first();
         if (!$subcategory) abort(404);
 
-        $masters = User::select('users.name as user_name', 'users.phone as user_phone', 'regions.name as region_name')
+        $masters = User::select('users.name as user_name', 'users.lastname as user_lastname', 'users.aboutme as user_aboutme', 'users.phone as user_phone', 'regions.name as region_name')
             ->join('regions', 'regions.id', '=', 'users.region_id')
             ->where('isMaster', true)
             ->where('region_id', $region->id)
