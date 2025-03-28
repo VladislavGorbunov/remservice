@@ -190,7 +190,7 @@ h1 {
 
 .gradient-text {
     color: #222; 
-    background-image: linear-gradient(40deg, #384bab 25%, #286ccb 45%); 
+    background-image: linear-gradient(40deg, #286ccb, #000); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
@@ -510,6 +510,7 @@ h1, h2 {
     font-size: 21px;
     font-weight: 600;
 }
+
 
 .footer-bg {
     background-color: rgb(243, 248, 255);

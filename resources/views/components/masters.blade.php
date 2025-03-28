@@ -1,6 +1,6 @@
 <div class="container">
-    <h2 class="text-center mt-5 mb-4">Частные мастера в вашем городе</h2>
-
+    <h2 class="text-center mt-5 mb-1"><span class="gradient-text">Частные мастера в вашем городе</span></h2>
+    
     @foreach ($masters as $master) 
         <div class="col-12 master-block border rounded p-4 mt-4 mb-4">
             <div class="row">
@@ -29,11 +29,10 @@
                 </div>
                     
                 <div class="col-12 col-md-3 px-3">
-                    <p>Рейтинг мастера: <b>4.9</b> из 5</p>
+                    <p>Рейтинг мастера: <b>4.9</b></p>
                     <p>Отзывов клиентов: <b>74</b></p>
                     <p class="">Выезд мастера: <b>Бесплатно</b></p>
-                    <p class="">Диагностика: <b>Бесплатно*</b></p>
-                    <p class="">Гарантия на ремонт: <b>1 год</b></p>
+                    <p class="">Диагностика: <b>500 руб.</b></p>
                     <button class="btn phone-button w-100 mt-1"><i class="bi bi-telephone"></i> Показать телефон</button>
                     <a href="" class="btn more-detailed-button w-100 mt-3"><i class="bi bi-eye"></i> Подробнее о мастере</a>
                 </div>
