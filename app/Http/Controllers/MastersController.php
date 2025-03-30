@@ -19,7 +19,6 @@ class MastersController extends Controller
     {
         $master_id = $request->input('id');
         $master = User::find($master_id);
-
         $phoneNumber = trim($master->phone);
 
         $pattern = '/[\+]?([7|8])[-|\s]?(\d{3})[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/';

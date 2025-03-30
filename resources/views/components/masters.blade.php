@@ -35,7 +35,7 @@
                     <p class="">Диагностика: <b>500 руб.</b></p>
                     <p class="">Срочный выезд: <b>Да</b></p>
                     <button class="btn phone-button w-100 mt-1" data-id="{{ $master['id'] }}"><i class="bi bi-telephone"></i> Показать телефон</button>
-                    <a href="" class="btn more-detailed-button w-100 mt-3"><i class="bi bi-eye"></i> Подробнее о мастере</a>
+                    <a href="" class="btn more-detailed-button w-100 mt-3">Подробнее о мастере</a>
                 </div>
                 
             </div>
@@ -63,6 +63,8 @@
                 
                 body: JSON.stringify(master),
             }
+
+            e.target.innerHTML = '<img src="/images/spinning-dots.svg" width="20">'
 
             let res = fetch('/get-phone', options)
             .then(data => data.json())

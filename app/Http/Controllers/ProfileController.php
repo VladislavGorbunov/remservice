@@ -16,7 +16,6 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
-        echo Auth::viaRemember();
         return view('profile.edit', [
             'user' => $request->user(),
         ]);
