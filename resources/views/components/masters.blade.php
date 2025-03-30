@@ -1,6 +1,6 @@
 <div class="container">
-    <h2 class="text-center mt-5 mb-1"><span class="gradient-text">Частные мастера в вашем городе</span></h2>
-    
+    <h2 class="text-center mt-5 mb-1"><span class="gradient-text">Частные мастера вашего города</span></h2>
+    <p class="text-center m-0">Выбирете профессионала который отремонтирует вашу технику!</p>
     @foreach ($masters as $master) 
         <div class="col-12 master-block border rounded p-4 mt-4 mb-4">
             <div class="row">
@@ -11,7 +11,7 @@
                 <div class="col-12 col-md-6 px-3">
                     <span class="master-name">{{ $master['name'] }} {{ $master['lastname'] }}</span>
                     <span class="d-block mt-2 mb-2">Город: <b>{{ $master['region'] }}</b></span>
-                    <span class="d-block mt-2 mb-2">Опыт ремонта: <b>{{ $master['experience'] ? $master['experience'] : '-'}}</b> лет</span>
+                    <span class="d-block mt-2 mb-2">Опыт ремонта: <b>{{ $master['experience'] }}</b></span>
         
                     <span class="d-block mt-2 mb-2">{{ $master['aboutme'] }}</span>
                     
@@ -21,7 +21,7 @@
                     <p class="mb-0 mt-2"><b>Ремонтирую:</b></p>
                     @foreach ($master['categories'] as $category) 
                         <span class="master-category-blocks">
-                            <a href="{{ $category['slug'] }}">{{ $category['name'] }}</a>
+                            <a href="{{ $category['slug'] }}"><i class="bi bi-list d-none d-md-inline-block"></i> {{ $category['name'] }}</a>
                         </span>
                     @endforeach
                     </div>
@@ -29,11 +29,12 @@
                 </div>
                     
                 <div class="col-12 col-md-3 px-3">
-                    <p>Рейтинг мастера: <b>4.9</b></p>
-                    <p>Отзывов клиентов: <b>74</b></p>
+                    <p>Рейтинг мастера: <b>4.9</b> <i class="bi bi-star-fill"></i></p>
+                    <p>Отзывов: <b>74</b> <a href="" class="view-review-link"><i class="bi bi-arrow-right"></i> Читать отзывы</a></p>
                     <p class="">Выезд мастера: <b>Бесплатно</b></p>
                     <p class="">Диагностика: <b>500 руб.</b></p>
-                    <button class="btn phone-button w-100 mt-1"><i class="bi bi-telephone"></i> Показать телефон</button>
+                    <p class="">Срочный выезд: <b>Да</b></p>
+                    <button class="btn phone-button w-100 mt-1" data-id="{{ $master['id'] }}"><i class="bi bi-telephone"></i> Показать телефон</button>
                     <a href="" class="btn more-detailed-button w-100 mt-3"><i class="bi bi-eye"></i> Подробнее о мастере</a>
                 </div>
                 
@@ -41,3 +42,34 @@
         </div>
     @endforeach
 </div>
+
+
+<script>
+    const btnGetPhone = document.querySelectorAll('.phone-button')
+
+    btnGetPhone.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+
+            const master = {
+                id: e.target.getAttribute('data-id')
+            }
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    "Content-Type": "application/json",
+                },
+                
+                body: JSON.stringify(master),
+            }
+
+            let res = fetch('/get-phone', options)
+            .then(data => data.json())
+            .then((phone) =>  {
+                e.target.innerHTML = phone.phone
+            })
+            
+        })
+    })
+</script>

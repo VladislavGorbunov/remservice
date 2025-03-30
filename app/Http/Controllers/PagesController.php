@@ -68,11 +68,15 @@ class PagesController extends Controller
 
 
         foreach ($masters as $master) {
+            
+            $experience = self::declension($master->experience, ['год', 'года', 'лет']);
+
             $masters_array[] = [
+                'id' => $master->id,
                 'name' => $master->name,
                 'lastname' => $master->lastname,
                 'phone' => $master->phone,
-                'experience' => $master->experience,
+                'experience' => $master->experience ? $master->experience . ' ' .$experience : ' Не указан ',
                 'aboutme' => $master->aboutme,
                 'region' => $master->region_name,
                 'categories' => User::find($master->id)->subcategory, // Категории ремонт. техники
@@ -88,5 +92,12 @@ class PagesController extends Controller
         $data['categories'] = Category::get();
 
         return view('site.subcategory', $data);
+    }
+    
+
+    public static function declension($n, $titles)
+    {
+        $cases = array(2, 0, 1, 1, 1, 2);
+        return $titles[($n % 100 > 4 && $n % 100 < 20) ? 2 : $cases[min($n % 10, 5)]];
     }
 }

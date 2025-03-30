@@ -25,7 +25,7 @@ Route::get('/', [PagesController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'index']);
 
-
+Route::post('/get-phone', [MastersController::class, 'getPhoneMaster']);
 
 Route::get('login', [AuthController::class, 'loginPage'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

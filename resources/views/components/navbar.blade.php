@@ -27,8 +27,8 @@
         </li>
       </ul>
       <form class="d-flex justify-content-center" role="search">
-        <a href="{{ route('login') }}" class="btn btn-navbar-outline mx-1" type="submit">Личный кабинет</a>
-        <a href="{{ route('for-the-masters') }}" class="btn btn-navbar mx-1" type="submit"><i class="bi bi-person-add"></i> Мастерам</a>
+        <a href="{{ route('login') }}" target="_blank" class="btn btn-navbar-outline mx-1">Личный кабинет</a>
+        <a href="{{ route('for-the-masters') }}" class="btn btn-navbar mx-1"><i class="bi bi-person-add"></i> Мастерам</a>
       </form>
     </div>
   </div>

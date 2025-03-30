@@ -11,8 +11,12 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    
 }
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+ }
 
 .shadow {
     box-shadow: 0 3px  20px -15px rgb(102, 107, 114) !important;
@@ -92,24 +96,25 @@ h1 {
 .btn-modal-city {
     font-size: 14px;
     background: none;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: none;
     border-radius: 10px;
     padding: 10px 25px;
     color: #000;
+    font-weight: 500;
 }
 
 .btn-modal-city:hover {
     font-size: 14px;
     background: none;
-    border: 1px solid rgba(0,0,0,0.1);
     padding: 10px 25px;
     color: #000;
+    border: none;
 }
 
 .btn-modal-city:focus {
     font-size: 14px;
     background: none;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: none;
     padding: 10px 25px;
     color: #000;
 }
@@ -117,7 +122,7 @@ h1 {
 .btn-modal-city:active {
     font-size: 14px;
     background: none !important;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: none;
     padding: 10px 25px;
     color: #000 !important;
 }
@@ -202,7 +207,7 @@ h1 {
     position: absolute;
     width: 350px;
     height: 350px;
-    bottom: -230px;
+    bottom: -210px;
     z-index: -1;
     left: 10%;
     background: url("/images/header-wash.png") top center;
@@ -220,8 +225,8 @@ h1 {
     display: block;
     position: absolute;
     width: 350px;
-    height: 300px;
-    top: -230px;
+    height: 350px;
+    top: -270px;
     z-index: -1;
     right: 10%;
     background: url("/images/header-wash.png") bottom center;
@@ -231,7 +236,7 @@ h1 {
 }
 
 .stir-wash-top:hover {
-    top: -190px;
+    top: -240px;
     transition: 1s;
 }
 
@@ -277,7 +282,7 @@ h1 {
     border-radius: 10px;
     padding: 12px 15px;
     font-size: 14px;
-    color: #000;
+    color: #4f46f3;
 }
 
 .btn-navbar-outline:hover {
@@ -451,9 +456,9 @@ h1, h2 {
 .phone-button {
     background: #463ee4;
     color: #fff;
-    padding: 13px;
+    padding: 12px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -469,9 +474,9 @@ h1, h2 {
 .more-detailed-button {
     background: #e3ebf8;
     color: #435ab6;
-    padding: 13px;
+    padding: 12px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -509,6 +514,16 @@ h1, h2 {
 .master-name {
     font-size: 21px;
     font-weight: 600;
+}
+
+.master-block .bi-star-fill {
+    color: rgb(255, 183, 0);
+}
+
+.master-block .view-review-link {
+    text-decoration: none;
+    color: #435ab6;
+    font-size: 14px;
 }
 
 
