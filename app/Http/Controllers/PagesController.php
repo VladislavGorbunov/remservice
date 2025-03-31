@@ -64,7 +64,7 @@ class PagesController extends Controller
             'subcategory_url' => $subcategory->slug,
         ];
 
-        $masters = User::select('users.*', 'regions.name as region_name', DB::raw('count(reviews.id) as count_reviews'))
+        $masters = User::select('users.*', 'regions.name as region_name', DB::raw('count(reviews.id) as count_reviews'), DB::raw('avg(reviews.estimation) as avg_estimation'))
             ->join('regions', 'regions.id', '=', 'users.region_id')
             ->join('users_subcategories', 'users_subcategories.user_id', '=', 'users.id')
             ->join('subcategories', 'subcategories.id', '=', 'users_subcategories.subcategory_id')
@@ -92,9 +92,9 @@ class PagesController extends Controller
                 'aboutme' => $master->aboutme,
                 'region' => $master->region_name,
                 'categories' => User::find($master->id)->subcategory, // Категории ремонт. техники
-                'review_count' => User::find($master->id)->reviews->count(), // Количество отзывов
-                'rating' => User::find($master->id)->reviews->avg('estimation'), // Средняя оценка
-                'count_reviews' => $master->count_reviews,
+                //'review_count' => User::find($master->id)->reviews->count(), // Количество отзывов
+                'reviews_count' => $master->count_reviews, // Кол-во отзывов
+                'avg_estimation' => round($master->avg_estimation, 1), // Средняя оценка
             ];
         }
 

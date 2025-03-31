@@ -1,6 +1,6 @@
 <div class="container">
-    <h2 class="text-center mt-4 mb-1">Частные мастера вашего города</h2>
-    <p class="text-center m-0">Выбирете профессионала который отремонтирует вашу технику!</p>
+    <h2 class="text-center mt-4 mb-1">Рейтинг мастеров вашего города</h2>
+    <p class="text-center m-0"><i class="bi bi-question-circle"></i> Узнать как мы строим наш рейтинг можно <a href="" target="_blank">по этой ссылке</a></p>
 
 
 
@@ -33,9 +33,8 @@
                 </div>
                     
                 <div class="col-12 col-md-3 px-3">
-                    <p>Рейтинг мастера: <b>{{ $master['rating'] ? $master['rating'] : 0 }}</b> <i class="bi bi-star-fill"></i></p>
-                    <p>Отзывов: <b>{{ $master['review_count'] }}</b> <a href="" class="view-review-link"><i class="bi bi-arrow-right"></i> Читать отзывы</a></p>
-                    {{ $master['count_reviews'] }} <- через join
+                    <p>Рейтинг мастера: <b>{{ $master['avg_estimation'] ? $master['avg_estimation'] : 0 }} </b> <i class="bi bi-star-fill"></i></p>
+                    <p>Отзывов: <b>{{ $master['reviews_count'] }}</b> <a href="" class="view-review-link"><i class="bi bi-arrow-right"></i> Читать отзывы</a></p>
                     <p class="">Выезд мастера: <b>Бесплатно</b></p>
                     <p class="">Диагностика: <b>500 руб.</b></p>
                     <p class="">Срочный выезд: <b>Да</b></p>
