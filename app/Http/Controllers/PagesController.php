@@ -64,15 +64,18 @@ class PagesController extends Controller
             'subcategory_url' => $subcategory->slug,
         ];
 
-        $masters = User::select('users.*', 'regions.name as region_name')
+        $masters = User::select('users.*', 'regions.name as region_name', DB::raw('count(reviews.id) as count_reviews'))
             ->join('regions', 'regions.id', '=', 'users.region_id')
             ->join('users_subcategories', 'users_subcategories.user_id', '=', 'users.id')
             ->join('subcategories', 'subcategories.id', '=', 'users_subcategories.subcategory_id')
+            ->leftJoin('reviews', 'reviews.user_id', '=', 'users.id')
             ->where('isMaster', true)
             ->where('users_subcategories.subcategory_id', $subcategory->id)
             ->where('region_id', $region->id)
-            ->orderBy('avg_estimation', 'asc')
-            ->orderBy('experience', 'asc')
+            ->orderBy('avg_estimation', 'desc') // По средней оценке
+            ->orderBy('count_reviews', 'desc') // По количеству отзывов
+            ->orderBy('experience', 'desc') // По опыту ремонта
+            ->groupBy('users.id')
             ->get();
 
 
@@ -90,7 +93,8 @@ class PagesController extends Controller
                 'region' => $master->region_name,
                 'categories' => User::find($master->id)->subcategory, // Категории ремонт. техники
                 'review_count' => User::find($master->id)->reviews->count(), // Количество отзывов
-                'rating' => User::find($master->id)->reviews->avg('estimation') // Средняя оценка
+                'rating' => User::find($master->id)->reviews->avg('estimation'), // Средняя оценка
+                'count_reviews' => $master->count_reviews,
             ];
         }
 
