@@ -22,10 +22,9 @@ return new class extends Migration
             $table->integer('phone_verify')->default(0);
             $table->text('aboutme')->nullable();
             $table->integer('experience')->nullable(); // Опыт работы
-            // $table->integer('age');
+            $table->float('avg_estimation')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            // $table->integer('role');
             $table->rememberToken();
             $table->timestamps();
             $table->integer('isAdmin')->default(0);
@@ -33,9 +32,6 @@ return new class extends Migration
             $table->integer('isClient')->default(0);
         });
 
-        Schema::table('users', function(Blueprint $table) {
-
-        });
     }
 
     /**

@@ -71,6 +71,8 @@ class PagesController extends Controller
             ->where('isMaster', true)
             ->where('users_subcategories.subcategory_id', $subcategory->id)
             ->where('region_id', $region->id)
+            ->orderBy('avg_estimation', 'asc')
+            ->orderBy('experience', 'asc')
             ->get();
 
 
