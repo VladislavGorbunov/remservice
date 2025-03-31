@@ -56,6 +56,13 @@ class PagesController extends Controller
 
         $masters_array = [];
 
+        $data['breadcrumb'] = [
+            'region_name' => $region->name,
+            'region_url' => $region->slug,
+            'subcategory_pretext' => 'Ремонт',
+            'subcategory_plural_name' => mb_strtolower($subcategory->plural_name),
+            'subcategory_url' => $subcategory->slug,
+        ];
 
         $masters = User::select('users.*', 'regions.name as region_name')
             ->join('regions', 'regions.id', '=', 'users.region_id')
@@ -80,6 +87,8 @@ class PagesController extends Controller
                 'aboutme' => $master->aboutme,
                 'region' => $master->region_name,
                 'categories' => User::find($master->id)->subcategory, // Категории ремонт. техники
+                'review_count' => User::find($master->id)->reviews->count(), // Количество отзывов
+                'rating' => User::find($master->id)->reviews->avg('estimation') // Средняя оценка
             ];
         }
 

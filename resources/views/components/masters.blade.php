@@ -1,6 +1,9 @@
 <div class="container">
-    <h2 class="text-center mt-5 mb-1"><span class="gradient-text">Частные мастера вашего города</span></h2>
+    <h2 class="text-center mt-4 mb-1">Частные мастера вашего города</h2>
     <p class="text-center m-0">Выбирете профессионала который отремонтирует вашу технику!</p>
+
+
+
     @foreach ($masters as $master) 
         <div class="col-12 master-block border rounded p-4 mt-4 mb-4">
             <div class="row">
@@ -24,24 +27,27 @@
                             <a href="{{ $category['slug'] }}"><i class="bi bi-list d-none d-md-inline-block"></i> {{ $category['name'] }}</a>
                         </span>
                     @endforeach
+
                     </div>
 
                 </div>
                     
                 <div class="col-12 col-md-3 px-3">
-                    <p>Рейтинг мастера: <b>4.9</b> <i class="bi bi-star-fill"></i></p>
-                    <p>Отзывов: <b>74</b> <a href="" class="view-review-link"><i class="bi bi-arrow-right"></i> Читать отзывы</a></p>
+                    <p>Рейтинг мастера: <b>{{ $master['rating'] ? $master['rating'] : 0 }}</b> <i class="bi bi-star-fill"></i></p>
+                    <p>Отзывов: <b>{{ $master['review_count'] }}</b> <a href="" class="view-review-link"><i class="bi bi-arrow-right"></i> Читать отзывы</a></p>
                     <p class="">Выезд мастера: <b>Бесплатно</b></p>
                     <p class="">Диагностика: <b>500 руб.</b></p>
                     <p class="">Срочный выезд: <b>Да</b></p>
                     <button class="btn phone-button w-100 mt-1" data-id="{{ $master['id'] }}"><i class="bi bi-telephone"></i> Показать телефон</button>
-                    <a href="" class="btn more-detailed-button w-100 mt-3">Подробнее о мастере</a>
+                    <a href="/master/{{ $master['id'] }}" class="btn more-detailed-button w-100 mt-3">Подробнее о мастере</a>
                 </div>
                 
             </div>
         </div>
     @endforeach
 </div>
+
+
 
 
 <script>
