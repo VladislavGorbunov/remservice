@@ -502,7 +502,7 @@ h1, h2 {
 
 .master-category-blocks {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 8px 12px;
     background: #ecf2f7;
     color: #505252;
     margin-right: 5px;
@@ -513,7 +513,7 @@ h1, h2 {
 
 .master-category-blocks a {
     text-decoration: none;
-    color: #286ccb;
+    color: #2d5792;
 }
 
 .master-name {
@@ -543,7 +543,7 @@ h1, h2 {
 
 .master-block hr {
     color: rgb(204, 223, 232);
-    margin: 0;
+    margin: 5px 0;
 }
 
 .master-block .view-review-link {

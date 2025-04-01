@@ -3,6 +3,7 @@
 use App\Http\Controllers\Panel\PanelController;
 use App\Http\Controllers\Panel\MasterController;
 use App\Http\Controllers\Panel\CategoryController;
+use App\Http\Controllers\Panel\PriceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +23,6 @@ Route::middleware(['auth', 'master'])->group(function () {
     Route::post('/panel/about-me', [MasterController::class, 'profileInfo'])->name('master-info');
     Route::get('/panel/category', [CategoryController::class, 'addCategory'])->name('category');
     Route::post('/panel/category', [CategoryController::class, 'addCategory'])->name('category');
+    Route::get('/panel/price', [PriceController::class, 'price'])->name('price');
+    Route::post('/panel/price', [PriceController::class, 'price'])->name('price');
 });

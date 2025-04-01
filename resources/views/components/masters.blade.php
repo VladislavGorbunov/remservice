@@ -28,13 +28,11 @@
                         </span>
                     @endforeach
 
-                   
-
-                    @foreach ($master['prices'] as $price) 
-                        {{ $price['name_service'] }}
-                    @endforeach
                     </div>
 
+                    <!-- @foreach ($master['prices'] as $price) 
+                        <p class="mt-2"><small>{{ $price['name_service'] }} от {{ $price['min_price'] }} до {{ $price['max_price'] }} руб. </small></p>
+                    @endforeach -->
                 </div>
                     
                 <div class="col-12 col-md-3 px-3">
@@ -45,6 +43,7 @@
                     <p class="">Срочный выезд: <b>Да</b></p>
                     <button class="btn phone-button w-100 mt-1" data-id="{{ $master['id'] }}"><i class="bi bi-telephone"></i> Показать телефон</button>
                     <a href="/master/{{ $master['id'] }}" class="btn more-detailed-button w-100 mt-3">Подробнее о мастере</a>
+                    
                 </div>
                 
             </div>
