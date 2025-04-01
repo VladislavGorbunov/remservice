@@ -29,10 +29,13 @@ class MastersController extends Controller
         ]);
     }
 
-    
-    public static function renderStars($rating, $maxRating) 
+
+    public static function renderStars($ratingMaster, int $maxRating)
     {
         $stars = '';
+
+        $rating = explode('.', round($ratingMaster, 1));
+
         $int = $rating[0];
 
         if (!empty($rating[1])) {

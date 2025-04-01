@@ -87,11 +87,7 @@ class PagesController extends Controller
             
             $experience = self::declension($master->experience, ['год', 'года', 'лет']);
 
-            $maxRating = 5;
-
-            $rating = explode('.', round($master->master_avg_estimation, 1));
-
-            $stars = MastersController::renderStars($rating, $maxRating);
+            $stars = MastersController::renderStars(round($master->master_avg_estimation, 1), 5);
 
             $masters_array[] = [
                 'id' => $master->id,
