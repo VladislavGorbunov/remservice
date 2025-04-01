@@ -589,7 +589,11 @@ h1, h2 {
 .footer-bg {
     background-color: rgb(243, 248, 255);
     bottom: 0;
-    height: 300px;
+    min-height: 320px;
+}
+
+footer {
+    font-size: 14px;
 }
 
 footer .nav-link {
@@ -597,5 +601,4 @@ footer .nav-link {
     padding: .5rem 1rem;
     color: #111;
     text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-  }
+}

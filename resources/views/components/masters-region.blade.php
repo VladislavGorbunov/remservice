@@ -24,7 +24,7 @@
                     <p class="mb-0 mt-2"><b>Ремонтирую:</b></p>
                     @foreach ($master['categories'] as $category) 
                         <span class="master-category-blocks">
-                            <a href="{{ $category['slug'] }}"><i class="bi bi-list d-none d-md-inline-block"></i> {{ $category['name'] }}</a>
+                            <a href="{{ $master['region_slug'] }}/{{ $category['slug'] }}"><i class="bi bi-list d-none d-md-inline-block"></i> {{ $category['name'] }}</a>
                         </span>
                     @endforeach
 
