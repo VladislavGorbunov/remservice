@@ -37,13 +37,53 @@ class PagesController extends Controller
         
         $users = User::where('region_id', $region->id)->where('isMaster', true)->get();
 
+        $masters = User::select('users.*', 'regions.name as region_name', DB::raw('count(reviews.id) as count_reviews'), DB::raw('avg(reviews.estimation) as master_avg_estimation'))
+        ->join('regions', 'regions.id', '=', 'users.region_id')
+        ->join('users_subcategories', 'users_subcategories.user_id', '=', 'users.id')
+        ->join('subcategories', 'subcategories.id', '=', 'users_subcategories.subcategory_id')
+        ->leftJoin('reviews', 'reviews.user_id', '=', 'users.id')
+        ->where('isMaster', true)
+        ->where('region_id', $region->id)
+        // ->orderBy('avg_estimation', 'desc') // По средней оценке
+        ->orderBy('count_reviews', 'desc') // По количеству отзывов
+        ->orderBy('experience', 'desc') // По опыту ремонта
+        ->groupBy('users.id')
+        ->limit(10)
+        ->get();
+        
+
+    foreach ($masters as $master) {
+        
+        $experience = self::declension($master->experience, ['год', 'года', 'лет']);
+
+        $stars = MastersController::renderStars(round($master->master_avg_estimation, 1), 5);
+
+        $masters_array[] = [
+            'id' => $master->id,
+            'name' => $master->name,
+            'lastname' => $master->lastname,
+            'phone' => $master->phone,
+            'experience' => $master->experience ? $master->experience . ' ' .$experience : ' Не указан ',
+            'aboutme' => $master->aboutme,
+            'region' => $master->region_name,
+            'categories' => User::find($master->id)->subcategory, // Категории ремонт. техники
+            //'review_count' => User::find($master->id)->reviews->count(), // Количество отзывов
+            'reviews_count' => $master->count_reviews, // Кол-во отзывов
+            'avg_estimation' => round($master->master_avg_estimation, 1), // Средняя оценка
+            'stars' => $stars
+        ];
+    }
+
+        $data['masters'] = $masters_array;
+
         $data['regionName'] = $region->name;
         $data['regionNameIn'] = $region->name_in;
-        $data['title'] = 'Частные мастера по ремонту бытовой техники ' . $region->name_in;
+        $data['title'] = 'Частные мастера по ремонту бытовой техники ' . $region->name_in . ', отзывы о мастерах, цены на ремонт';
+        $data['description'] = 'Все проверенные частные мастера по ремонту бытовой техники ' . $region->name_in . ' на одном сайте. Читайте отзывы, сравнивайте цены на услуги, выбирайте проверенных специалистов.';
         $data['header_text'] = 'Частные мастера по ремонту бытовой техники ' . $region->name_in;
         $data['categories'] = Category::get();
 
-        return view('site.index', $data);
+        return view('site.region_index', $data);
     }
 
 
@@ -66,8 +106,6 @@ class PagesController extends Controller
         ];
 
         
-
-
         $masters = User::select('users.*', 'regions.name as region_name', DB::raw('count(reviews.id) as count_reviews'), DB::raw('avg(reviews.estimation) as master_avg_estimation'))
             ->join('regions', 'regions.id', '=', 'users.region_id')
             ->join('users_subcategories', 'users_subcategories.user_id', '=', 'users.id')
@@ -109,6 +147,7 @@ class PagesController extends Controller
         $data['links'] = $masters->links(); // Ссылки пагинации
 
         $data['title'] = 'Частные мастера по ремонту ' . mb_strtolower($subcategory->plural_name) . ' ' . $region->name_in .', рейтинг, отзывы, цены';
+        $data['description'] = 'Вызвать частного мастера по ремонту ' . mb_strtolower($subcategory->plural_name) . ' на дом ' . $region->name_in . '. Отзывы о мастерах, цены на ремонт ' . mb_strtolower($subcategory->plural_name);
         $data['header_text'] = 'Частные мастера по ремонту ' . mb_strtolower($subcategory->plural_name) . ' ' . $region->name_in;
         $data['regionName'] = $region->name;
         $data['regionNameIn'] = $region->name_in;

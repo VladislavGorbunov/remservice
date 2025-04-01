@@ -5,7 +5,7 @@
     <x-headers :regionNameIn="$regionNameIn" :regionName="$regionName" :headertext="$header_text"/>
         <x-advantages/>
         <x-catalog-of-services :categories="$categories"/>
-        <x-top-masters/>
+        <x-masters-region :masters="$masters"/>
         
     <x-footer/>
 @endsection
