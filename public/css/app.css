@@ -521,17 +521,68 @@ h1, h2 {
     font-weight: 600;
 }
 
-.master-block .bi-star-fill {
+.master-block .bi-star-fill, .bi-star-half {
     position: relative;
     top: 0px;
-    font-size: 15px;
-    color: rgb(255, 183, 0);
+    font-size: 18px;
+    color: rgb(247, 178, 5);
+    margin-right: 2px;
+    left: 10px;
+}
+
+.master-block .bi-star {
+    position: relative;
+    top: 0px;
+    font-size: 18px;
+    color: rgb(247, 178, 5);
+    margin-right: 2px;
+    left: 10px;
+    opacity: 0.4;
+}
+
+
+.master-block hr {
+    color: rgb(204, 223, 232);
+    margin: 0;
 }
 
 .master-block .view-review-link {
     text-decoration: none;
     color: #435ab6;
     font-size: 14px;
+}
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #1a8de1;
+    background-color: #e7effb;
+    border-color: #c5d4eb;
+    font-size: 19px;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    font-size: 19px;
+    color: #0d6efd;
+    text-decoration: none;
+    background-color: #fff;
+    border: 0px solid #dee2e6;
+      border-top-color: rgb(222, 226, 230);
+      border-right-color: rgb(222, 226, 230);
+      border-bottom-color: rgb(222, 226, 230);
+      border-left-color: rgb(222, 226, 230);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-radius: 6px;
 }
 
 

@@ -15,9 +15,9 @@
                     <span class="master-name">{{ $master['name'] }} {{ $master['lastname'] }}</span>
                     <span class="d-block mt-2 mb-2">Город: <b>{{ $master['region'] }}</b></span>
                     <span class="d-block mt-2 mb-2">Опыт ремонта: <b>{{ $master['experience'] }}</b></span>
-        
+                    <hr>
                     <span class="d-block mt-2 mb-2">{{ $master['aboutme'] }}</span>
-                    
+                    <hr>
                     
                     <!-- {{ $master['phone'] }} -->
                     <div class="mb-3">
@@ -33,7 +33,7 @@
                 </div>
                     
                 <div class="col-12 col-md-3 px-3">
-                    <p>Рейтинг мастера: <b>{{ $master['avg_estimation'] ? $master['avg_estimation'] : 0 }} </b> <i class="bi bi-star-fill"></i></p>
+                    <p>Рейтинг: <b>{{ $master['avg_estimation'] ? $master['avg_estimation'] : 0 }} из 5</b> <?= $master['stars'] ?></p>
                     <p>Отзывов: <b>{{ $master['reviews_count'] }}</b> <a href="" class="view-review-link"><i class="bi bi-arrow-right"></i> Читать отзывы</a></p>
                     <p class="">Выезд мастера: <b>Бесплатно</b></p>
                     <p class="">Диагностика: <b>500 руб.</b></p>
@@ -45,6 +45,9 @@
             </div>
         </div>
     @endforeach
+
+
+    <?= $links ?>
 </div>
 
 

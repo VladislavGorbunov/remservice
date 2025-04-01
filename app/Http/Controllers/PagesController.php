@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\SubCategory;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\MastersController;
 
 class PagesController extends Controller
 {
@@ -64,7 +65,10 @@ class PagesController extends Controller
             'subcategory_url' => $subcategory->slug,
         ];
 
-        $masters = User::select('users.*', 'regions.name as region_name', DB::raw('count(reviews.id) as count_reviews'), DB::raw('avg(reviews.estimation) as avg_estimation'))
+        
+
+
+        $masters = User::select('users.*', 'regions.name as region_name', DB::raw('count(reviews.id) as count_reviews'), DB::raw('avg(reviews.estimation) as master_avg_estimation'))
             ->join('regions', 'regions.id', '=', 'users.region_id')
             ->join('users_subcategories', 'users_subcategories.user_id', '=', 'users.id')
             ->join('subcategories', 'subcategories.id', '=', 'users_subcategories.subcategory_id')
@@ -72,16 +76,22 @@ class PagesController extends Controller
             ->where('isMaster', true)
             ->where('users_subcategories.subcategory_id', $subcategory->id)
             ->where('region_id', $region->id)
-            ->orderBy('avg_estimation', 'desc') // По средней оценке
+            // ->orderBy('avg_estimation', 'desc') // По средней оценке
             ->orderBy('count_reviews', 'desc') // По количеству отзывов
             ->orderBy('experience', 'desc') // По опыту ремонта
             ->groupBy('users.id')
-            ->get();
-
+            ->paginate(10);
+            
 
         foreach ($masters as $master) {
             
             $experience = self::declension($master->experience, ['год', 'года', 'лет']);
+
+            $maxRating = 5;
+
+            $rating = explode('.', round($master->master_avg_estimation, 1));
+
+            $stars = MastersController::renderStars($rating, $maxRating);
 
             $masters_array[] = [
                 'id' => $master->id,
@@ -94,11 +104,13 @@ class PagesController extends Controller
                 'categories' => User::find($master->id)->subcategory, // Категории ремонт. техники
                 //'review_count' => User::find($master->id)->reviews->count(), // Количество отзывов
                 'reviews_count' => $master->count_reviews, // Кол-во отзывов
-                'avg_estimation' => round($master->avg_estimation, 1), // Средняя оценка
+                'avg_estimation' => round($master->master_avg_estimation, 1), // Средняя оценка
+                'stars' => $stars
             ];
         }
 
         $data['masters'] = $masters_array;
+        $data['links'] = $masters->links(); // Ссылки пагинации
 
         $data['title'] = 'Частные мастера по ремонту ' . mb_strtolower($subcategory->plural_name) . ' ' . $region->name_in .', рейтинг, отзывы, цены';
         $data['header_text'] = 'Частные мастера по ремонту ' . mb_strtolower($subcategory->plural_name) . ' ' . $region->name_in;

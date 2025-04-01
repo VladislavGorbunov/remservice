@@ -28,4 +28,33 @@ class MastersController extends Controller
             'phone' => $phone,
         ]);
     }
+
+    
+    public static function renderStars($rating, $maxRating) 
+    {
+        $stars = '';
+        $int = $rating[0];
+
+        if (!empty($rating[1])) {
+            $float = $rating[1];
+        } else {
+            $float = 0;
+        }
+
+        for ($i = 0; $i < $int; $i++) {
+            $stars .= '<i class="bi bi-star-fill"></i>';
+        }
+
+        if ($float >= 5) {
+            $stars .= '<i class="bi bi-star-half"></i>';
+        } else {
+            $stars .= '<i class="bi bi-star"></i>';
+        }
+
+        for ($e = 0; $e < $maxRating - $int - 1; $e++) {
+            $stars .= '<i class="bi bi-star"></i>';
+        }
+
+        return $stars;
+    }
 }
