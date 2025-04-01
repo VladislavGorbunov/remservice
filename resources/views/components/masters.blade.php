@@ -28,6 +28,11 @@
                         </span>
                     @endforeach
 
+                   
+
+                    @foreach ($master['prices'] as $price) 
+                        {{ $price['name_service'] }}
+                    @endforeach
                     </div>
 
                 </div>

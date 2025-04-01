@@ -51,6 +51,7 @@ class PagesController extends Controller
                 'region'         => $master->region_name,
                 'region_slug'    => $master->region_slug,
                 'categories'     => User::find($master->id)->subcategory,     // Категории ремонт. техники
+                'prices'         => User::find($master->id)->prices,
                 'reviews_count'  => $master->count_reviews,                   // Кол-во отзывов
                 'avg_estimation' => round($master->master_avg_estimation, 1), // Средняя оценка
                 'stars'          => $stars,
@@ -107,6 +108,7 @@ class PagesController extends Controller
                 'region'         => $master->region_name,
                 'region_slug'    => $master->region_slug,
                 'categories'     => User::find($master->id)->subcategory,     // Категории ремонт. техники
+                'prices'         => User::find($master->id)->prices,
                 'reviews_count'  => $master->count_reviews,                   // Кол-во отзывов
                 'avg_estimation' => round($master->master_avg_estimation, 1), // Средняя оценка
                 'stars'          => $stars,
