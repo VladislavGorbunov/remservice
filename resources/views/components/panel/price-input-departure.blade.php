@@ -1,4 +1,4 @@
-<div class="row g-3 mt-2">
+<div class="row g-3 mt-2 price-inputs">
   <div class="col-sm-7">
     <label class="form-label">Название услуги:</label>
     <input type="text" class="form-control" value="Стоимость выезда мастера" readonly name="departure[name]">
