@@ -1,17 +1,31 @@
 <div class="row mb-3">
-<h4 class="mb-2">Стоимость услуг</h4>
+
 
 <form action="" method="post">
     @csrf
-
+    <h4 class="mb-1">Стоимость выезда и диагностики</h4>
     <x-panel.price-input-diagnostic />
     <x-panel.price-input-departure />
 
     <div class="inputs">
+        <h4 class="mt-4 mb-1">Стоимость ваших услуг:</h4>
+        <div class="row g-3 mt-1 price-inputs">
+            <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="Название услуги. Например: Замена манжеты люка" name="price[user_price][name]">
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" placeholder="1500" name="price[user_price][min]">
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" placeholder="2500" name="price[user_price][max]">
+            </div>
+        </div>
     </div>
 
-<button class="btn btn-success mt-3 add-input">Добавить поле</button>
-<button type="submit" class="btn btn-success mt-3">Сохранить</button>
+<div class="">
+<button class="btn btn-success mt-4 add-input px-4 py-2">Добавить ещё услугу</button>
+<button type="submit" class="btn btn-primary mt-4 px-4 py-2">Сохранить</button>
+</div>
 </form>
 
 
@@ -20,30 +34,22 @@
 <script>
     const btnAddInput = document.querySelector('.add-input')
     const userInputsBlock = document.querySelector('.inputs')
+    const input = document.querySelector('.price-inputs')
 
     let count = 0
-
+    
     btnAddInput.addEventListener('click', (e) => {
         e.preventDefault()
         
-        let inputs = `
-        <div class="row g-3 mt-2 price-inputs">
-            <div class="col-sm-7">
-                <label class="form-label">Название услуги:</label>
-                <input type="text" class="form-control" value="Название услуги" name="user_service${count}[name]">
-            </div>
-            <div class="col-sm">
-                <label class="form-label">Цена от: (руб.)</label>
-                <input type="text" class="form-control" placeholder="1500" name="user_service${count}[min]">
-            </div>
-            <div class="col-sm">
-                <label class="form-label">Цена до: (руб.)</label>
-                <input type="text" class="form-control" placeholder="2500" name="user_service${count}[max]">
-            </div>
-        </div>
-        `
-        count++
-        userInputsBlock.innerHTML += inputs
+        const newInput = input.cloneNode(true)
+        
+        const qq =  newInput.querySelectorAll('input')
 
+        qq[0].setAttribute('name', `price[user_price${count}][name]`)
+        qq[0].value = ''
+        qq[1].setAttribute('name', `price[user_price${count}][min]`)
+        qq[2].setAttribute('name', `price[user_price${count}][max]`)
+        userInputsBlock.append(newInput)
+        count++
     })
 </script>

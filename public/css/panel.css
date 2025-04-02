@@ -19,3 +19,26 @@ a {
 .alert {
     color: rgb(72, 74, 81);
 }
+
+.btn-success {
+    background: rgb(30, 192, 154);
+    border: 1px solid rgb(30, 192, 154);
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 12px 20px !important;
+}
+
+.btn-primary {
+    background: #463ee4;
+    border: 1px solid #463ee4;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 12px 20px !important;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f0f9fc;
+    opacity: 1;
+  }
