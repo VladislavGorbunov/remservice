@@ -40,16 +40,20 @@
     
     btnAddInput.addEventListener('click', (e) => {
         e.preventDefault()
-        
-        const newInput = input.cloneNode(true)
-        
-        const qq =  newInput.querySelectorAll('input')
-
-        qq[0].setAttribute('name', `price[user_price${count}][name]`)
-        qq[0].value = ''
-        qq[1].setAttribute('name', `price[user_price${count}][min]`)
-        qq[2].setAttribute('name', `price[user_price${count}][max]`)
-        userInputsBlock.append(newInput)
         count++
+
+        if (count < 15) {
+            const newInput = input.cloneNode(true)
+        
+            const qq =  newInput.querySelectorAll('input')
+
+            qq[0].setAttribute('name', `price[user_price${count}][name]`)
+            qq[0].value = ''
+            qq[1].setAttribute('name', `price[user_price${count}][min]`)
+            qq[2].setAttribute('name', `price[user_price${count}][max]`)
+            userInputsBlock.append(newInput)
+        } else {
+            alert('Превышен лимит')
+        }
     })
 </script>
