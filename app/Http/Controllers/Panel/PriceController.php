@@ -16,6 +16,10 @@ class PriceController extends Controller
             echo '<pre>';
             var_dump($request->input());
             echo '</pre>';
+
+            foreach ($request->input() as $key => $input) {
+                echo $key;
+            }
         }
 
         return view('panel.price');
