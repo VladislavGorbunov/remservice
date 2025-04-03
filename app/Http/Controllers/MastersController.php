@@ -54,9 +54,10 @@ class MastersController extends Controller
         $master      = User::find($master_id);
         $phoneNumber = trim($master->phone);
 
-        $pattern = '/[\+]?([7|8])[-|\s]?(\d{3})[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/';
+        $pattern = '/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{3})[-|\s]?\)[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/';
+                   
         $phone   = preg_replace($pattern, '+7 ($2) $3-$4-$5', $phoneNumber);
-
+        
         return response()->json([
             'phone' => $phone,
         ]);
