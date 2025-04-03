@@ -75,7 +75,7 @@
             let res = fetch('/get-phone', options)
             .then(data => data.json())
             .then((phone) =>  {
-                e.target.innerHTML = phone.phone
+                e.target.innerHTML = '<i class="bi bi-telephone"></i>' + phone.phone
             })
             
         })

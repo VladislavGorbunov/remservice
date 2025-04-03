@@ -21,7 +21,6 @@ class PriceController extends Controller
             foreach ($request->input()['price'] as $price) {
                 
                 if ($price['name'] && $price['min'] && $price['max']) {
-
                     Price::create([
                         'user_id' => Auth::user()->id,
                         'name_service' => $price['name'],
