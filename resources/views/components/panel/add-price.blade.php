@@ -1,6 +1,5 @@
 <div class="row mb-3">
 
-
 <form action="" method="post">
     @csrf
     <h4 class="mb-1">Стоимость выезда и диагностики</h4>
@@ -14,10 +13,10 @@
                 <input type="text" class="form-control" placeholder="Название услуги. Например: Замена манжеты люка" name="price[user_price][name]">
             </div>
             <div class="col-sm">
-                <input type="text" class="form-control" placeholder="1500" name="price[user_price][min]">
+                <input type="text" class="form-control" placeholder="1500" name="price[user_price][min]" >
             </div>
             <div class="col-sm">
-                <input type="text" class="form-control" placeholder="2500" name="price[user_price][max]">
+                <input type="text" class="form-control" placeholder="2500" name="price[user_price][max]" >
             </div>
         </div>
     </div>
@@ -49,8 +48,11 @@
 
             qq[0].setAttribute('name', `price[user_price${count}][name]`)
             qq[0].value = ''
+            qq[0].setAttribute('required', true)
             qq[1].setAttribute('name', `price[user_price${count}][min]`)
+            qq[1].setAttribute('required', true)
             qq[2].setAttribute('name', `price[user_price${count}][max]`)
+            qq[2].setAttribute('required', true)
             userInputsBlock.append(newInput)
         } else {
             alert('Превышен лимит')
