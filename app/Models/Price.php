@@ -12,7 +12,7 @@ class Price extends Model
     use HasFactory;
 
     protected $table = 'prices';
-    protected $fillable = ['name_service'];
+    protected $fillable = ['user_id', 'name_service', 'min_price', 'max_price'];
 
     public function user(): BelongsTo
     {
