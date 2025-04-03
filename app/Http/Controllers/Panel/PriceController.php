@@ -14,7 +14,7 @@ class PriceController extends Controller
     //
     public function price(Request $request)
     {
-        $data['prices_count'] = Price::where('user_id', Auth::user()->id)->count();
+        $data['prices'] = Price::where('user_id', Auth::user()->id)->get();
 
         if ($request->method() == 'POST') {
             
@@ -35,6 +35,6 @@ class PriceController extends Controller
             return redirect('/panel');
         }
 
-        return view('panel.price');
+        return view('panel.price', $data);
     }
 }

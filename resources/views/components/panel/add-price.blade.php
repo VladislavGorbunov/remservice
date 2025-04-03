@@ -1,5 +1,10 @@
 <div class="row mb-3">
 
+@foreach ($prices as $price) 
+    {{ $price['name_service'] }}
+    {{ $price['min_price'] }}
+    {{ $price['max_price'] }}
+@endforeach
 <form action="" method="post">
     @csrf
     <h4 class="mb-1">Стоимость выезда и диагностики</h4>

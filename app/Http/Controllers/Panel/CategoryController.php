@@ -38,7 +38,6 @@ class CategoryController extends Controller
 
             self::insertCategory($request->categories);
             
-
             $request->session()->flash('message', 'Данные обновлены');
             return redirect('/panel');
         }

@@ -10,7 +10,7 @@
             </div>
 
             <div class="col-12 col-md-9 mt-4">
-               <x-panel.add-price />
+               <x-panel.add-price :prices="$prices"/>
             </div>
         </div>
     </div>

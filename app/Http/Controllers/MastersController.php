@@ -83,7 +83,7 @@ class MastersController extends Controller
         if ($float >= 5) {
             $stars .= '<i class="bi bi-star-half"></i>';
         } elseif ($float < 5 && $int != 5) {
-            $stars .= '<i class="bi bi-star"></i>f';
+            $stars .= '<i class="bi bi-star"></i>';
         }
 
         for ($e = 0; $e < $maxRating - $int - 1; $e++) {
