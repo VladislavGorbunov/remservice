@@ -10,7 +10,7 @@
             </div>
 
             <div class="col-12 col-md-9 mt-4">
-               <x-panel.add-price :prices="$prices"/>
+               <x-panel.add-price :userPrices="$user_prices" :diagnosticPrice="$diagnostic_price" :departurePrice="$departure_price"/>
             </div>
         </div>
     </div>

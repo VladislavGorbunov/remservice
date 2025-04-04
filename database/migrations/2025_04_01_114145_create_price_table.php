@@ -18,10 +18,13 @@ return new class extends Migration
             $table->string('name_service');
             $table->integer('min_price');
             $table->integer('max_price')->nullable();
+            
             $table->foreign('user_id')->references('id')->on('users')
             ->onUpdate('cascade')
             ->onDelete('cascade');
         });
+
+        
     }
 
     /**
